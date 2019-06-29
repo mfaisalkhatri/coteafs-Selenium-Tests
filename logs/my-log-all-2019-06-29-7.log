@@ -1,7 +1,0 @@
-[23:59:45.873] [INFO ] - Starting the browser... (Browser:212) 
-[23:59:45.909] [INFO ] - Setting up Chrome driver... (Browser:75) 
-[23:59:52.482] [INFO ] - Setting screen size of Browser to NORMAL... (Browser:253) 
-[23:59:52.483] [INFO ] - Setting screen resolution to [ScreenResolution{height=768, width=1280}]... (Browser:264) 
-[23:59:53.651] [INFO ] - Finding elements available on the page. (PageFactory:51) 
-[23:59:53.674] [INFO ] - Finding element signInLink using locator By.linkText: Sign in. (PageFactory:83) 
-[23:59:53.712] [INFO ] - Navigating to [http://automationpractice.com/index.php]... (DriverListner:299) 
