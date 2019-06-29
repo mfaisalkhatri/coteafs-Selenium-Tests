@@ -40,7 +40,6 @@
 			<artifactId>javafaker</artifactId>
 			<version>0.18</version>
 		</dependency>
-
 	</dependencies>
 
 
