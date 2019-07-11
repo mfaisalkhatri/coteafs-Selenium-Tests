@@ -1,6 +1,9 @@
 browser: CHROME
 url: http://automationpractice.com/index.php
 headless_mode: false
+params:
+  user: mngr26593
+  password: abc@123
 playback:
   screen_state: NORMAL
   highlight: true
@@ -9,7 +12,7 @@ playback:
 #    height: 768
   delays:
     implicit: 60
-    explicit: 60
+    explicit: 30
     before_key_press: 0
     after_key_press: 0
     before_mouse_move: 0

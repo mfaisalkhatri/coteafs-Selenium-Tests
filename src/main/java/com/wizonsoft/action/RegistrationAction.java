@@ -47,8 +47,6 @@ public class RegistrationAction extends AbstractPageAction <RegistrationAction> 
 		final DateFormat monthOfDate = new SimpleDateFormat ("MM");
 		final DateFormat yearOfDate = new SimpleDateFormat ("YYYY");
 		this.register.day ()
-			.click ();
-		this.register.day ()
 			.select (dayOfDate.format (date));
 		this.register.month ()
 			.select (monthOfDate.format (date));

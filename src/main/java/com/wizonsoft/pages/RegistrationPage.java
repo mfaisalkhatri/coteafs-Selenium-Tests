@@ -1,8 +1,9 @@
 package com.wizonsoft.pages;
 
+import org.openqa.selenium.By;
+
 import com.github.wasiqb.coteafs.selenium.core.BrowserPage;
-import com.github.wasiqb.coteafs.selenium.core.PageFactory;
-import com.github.wasiqb.coteafs.selenium.core.annotation.Find;
+import com.github.wasiqb.coteafs.selenium.core.element.IElementActions;
 import com.github.wasiqb.coteafs.selenium.core.element.IMouseActions;
 import com.github.wasiqb.coteafs.selenium.core.element.ISelectboxActions;
 import com.github.wasiqb.coteafs.selenium.core.element.ITextboxActions;
@@ -13,76 +14,12 @@ import com.github.wasiqb.coteafs.selenium.core.element.ITextboxActions;
  */
 public class RegistrationPage extends BrowserPage {
 
-	@Find (id = "address1")
-	private ITextboxActions		addressLine1;
-
-	@Find (id = "address2")
-	private ITextboxActions		addressLine2;
-
-	@Find (id = "city")
-	private ITextboxActions		city;
-
-	@Find (id = "company")
-	private ITextboxActions		company;
-
-	@Find (id = "id_country")
-	private ISelectboxActions	country;
-
-	@Find (css = "#uniform-days > #days")
-	private ISelectboxActions	day;
-
-	@Find (name = "customer_firstname")
-	private ITextboxActions		firstName;
-
-	@Find (name = "customer_lastname")
-	private ITextboxActions		lastName;
-
-	@Find (id = "phone_mobile")
-	private ITextboxActions		mobilePhone;
-
-	@Find (css = "#months")
-	private ISelectboxActions	month;
-
-	@Find (css = "#uniform-id_gender1")
-	private IMouseActions		mrRadioBtn;
-
-	@Find (css = "#uniform-id_gender2")
-	private IMouseActions		mrsRadioBtn;
-
-	@Find (id = "passwd")
-	private ITextboxActions		password;
-
-	@Find (id = "optin")
-	private IMouseActions		receiveOffers;
-
-	@Find (id = "submitAccount")
-	private IMouseActions		registerButton;
-
-	@Find (id = "newsletter")
-	private IMouseActions		signUp;
-
-	@Find (id = "uniform-id_state")
-	private ISelectboxActions	state;
-
-	@Find (css = "#years")
-	private ISelectboxActions	year;
-
-	@Find (id = "postcode")
-	private ITextboxActions		zipCode;
-
-	/**
-	 * @author Faisal Khatri
-	 */
-	public RegistrationPage () {
-		PageFactory.init (this);
-	}
-
 	/**
 	 * @since Jun 29, 2019
 	 * @return Address Line 1
 	 */
 	public ITextboxActions addressLine1 () {
-		return this.addressLine1;
+		return onElement (By.id ("address1"));
 	}
 
 	/**
@@ -90,7 +27,7 @@ public class RegistrationPage extends BrowserPage {
 	 * @return address line 2
 	 */
 	public ITextboxActions addressLine2 () {
-		return this.addressLine2;
+		return onElement (By.id ("address2"));
 	}
 
 	/**
@@ -98,7 +35,7 @@ public class RegistrationPage extends BrowserPage {
 	 * @return city
 	 */
 	public ITextboxActions city () {
-		return this.city;
+		return onElement (By.id ("city"));
 	}
 
 	/**
@@ -106,7 +43,7 @@ public class RegistrationPage extends BrowserPage {
 	 * @return company
 	 */
 	public ITextboxActions company () {
-		return this.company;
+		return onElement (By.id ("company"));
 	}
 
 	/**
@@ -114,7 +51,15 @@ public class RegistrationPage extends BrowserPage {
 	 * @return country
 	 */
 	public ISelectboxActions country () {
-		return this.country;
+		return onElement (By.id ("id_country"));
+	}
+
+	/**
+	 * @since Jul 11, 2019
+	 * @return element
+	 */
+	public IElementActions parentOfDay () {
+		return onElement (By.id ("uniform-days"));
 	}
 
 	/**
@@ -122,7 +67,10 @@ public class RegistrationPage extends BrowserPage {
 	 * @return day
 	 */
 	public ISelectboxActions day () {
-		return this.day;
+		// return onElement (By
+		// .cssSelector ("div.account_creation > div.form-group div#uniform-days >
+		// select#days"));
+		return parentOfDay ().find (By.id ("days"));
 	}
 
 	/**
@@ -130,7 +78,7 @@ public class RegistrationPage extends BrowserPage {
 	 * @return First Name
 	 */
 	public ITextboxActions firstName () {
-		return this.firstName;
+		return onElement (By.id ("customer_firstname"));
 	}
 
 	/**
@@ -138,7 +86,7 @@ public class RegistrationPage extends BrowserPage {
 	 * @return lastname
 	 */
 	public ITextboxActions lastName () {
-		return this.lastName;
+		return onElement (By.id ("customer_lastname"));
 	}
 
 	/**
@@ -146,7 +94,7 @@ public class RegistrationPage extends BrowserPage {
 	 * @return mobilephone
 	 */
 	public ITextboxActions mobilePhone () {
-		return this.mobilePhone;
+		return onElement (By.id ("phone_mobile"));
 	}
 
 	/**
@@ -154,7 +102,7 @@ public class RegistrationPage extends BrowserPage {
 	 * @return month
 	 */
 	public ISelectboxActions month () {
-		return this.month;
+		return onElement (By.id ("months"));
 	}
 
 	/**
@@ -162,7 +110,7 @@ public class RegistrationPage extends BrowserPage {
 	 * @return Mr Radio button
 	 */
 	public IMouseActions mrRadioBtn () {
-		return this.mrRadioBtn;
+		return onElement (By.id ("uniform-id_gender1"));
 	}
 
 	/**
@@ -170,7 +118,7 @@ public class RegistrationPage extends BrowserPage {
 	 * @return Mrs Radio button
 	 */
 	public IMouseActions mrsRadioBtn () {
-		return this.mrsRadioBtn;
+		return onElement (By.id ("uniform-id_gender2"));
 	}
 
 	/**
@@ -178,7 +126,7 @@ public class RegistrationPage extends BrowserPage {
 	 * @return password
 	 */
 	public ITextboxActions password () {
-		return this.password;
+		return onElement (By.id ("passwd"));
 	}
 
 	/**
@@ -186,7 +134,7 @@ public class RegistrationPage extends BrowserPage {
 	 * @return receive offers
 	 */
 	public IMouseActions receiveOffers () {
-		return this.receiveOffers;
+		return onElement (By.id ("optin"));
 	}
 
 	/**
@@ -194,7 +142,7 @@ public class RegistrationPage extends BrowserPage {
 	 * @return register button
 	 */
 	public IMouseActions registerButton () {
-		return this.registerButton;
+		return onElement (By.id ("submitAccount"));
 	}
 
 	/**
@@ -202,7 +150,7 @@ public class RegistrationPage extends BrowserPage {
 	 * @return signup checkbox
 	 */
 	public IMouseActions signUp () {
-		return this.signUp;
+		return onElement (By.id ("newsletter"));
 	}
 
 	/**
@@ -210,7 +158,7 @@ public class RegistrationPage extends BrowserPage {
 	 * @return state
 	 */
 	public ISelectboxActions state () {
-		return this.state;
+		return onElement (By.id ("uniform-id_state"));
 	}
 
 	/**
@@ -218,7 +166,7 @@ public class RegistrationPage extends BrowserPage {
 	 * @return year
 	 */
 	public ISelectboxActions year () {
-		return this.year;
+		return onElement (By.id ("years"));
 	}
 
 	/**
@@ -226,7 +174,7 @@ public class RegistrationPage extends BrowserPage {
 	 * @return zip code
 	 */
 	public ITextboxActions zipCode () {
-		return this.zipCode;
+		return onElement (By.id ("postcode"));
 	}
 
 }

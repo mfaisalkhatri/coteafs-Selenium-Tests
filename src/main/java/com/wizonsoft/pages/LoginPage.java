@@ -1,8 +1,8 @@
 package com.wizonsoft.pages;
 
+import org.openqa.selenium.By;
+
 import com.github.wasiqb.coteafs.selenium.core.BrowserPage;
-import com.github.wasiqb.coteafs.selenium.core.PageFactory;
-import com.github.wasiqb.coteafs.selenium.core.annotation.Find;
 import com.github.wasiqb.coteafs.selenium.core.element.IMouseActions;
 import com.github.wasiqb.coteafs.selenium.core.element.ITextboxActions;
 
@@ -12,30 +12,12 @@ import com.github.wasiqb.coteafs.selenium.core.element.ITextboxActions;
  */
 public class LoginPage extends BrowserPage {
 
-	@Find (id = "SubmitCreate")
-	private IMouseActions	createAccountButton;
-	@Find (id = "email_create")
-	private ITextboxActions	emailId;
-	@Find (id = "passwd")
-	private ITextboxActions	password;
-	@Find (id = "SubmitLogin")
-	private IMouseActions	signInButton;
-	@Find (id = "email")
-	private ITextboxActions	signInEmail;
-
-	/**
-	 * @author Faisal Khatri
-	 */
-	public LoginPage () {
-		PageFactory.init (this);
-	}
-
 	/**
 	 * @since Jun 29, 2019
 	 * @return submit button
 	 */
 	public IMouseActions createAccountButton () {
-		return this.createAccountButton;
+		return onElement (By.id ("SubmitCreate"));
 	}
 
 	/**
@@ -43,7 +25,7 @@ public class LoginPage extends BrowserPage {
 	 * @return email Id
 	 */
 	public ITextboxActions emailId () {
-		return this.emailId;
+		return onElement (By.id ("email_create"));
 	}
 
 	/**
@@ -51,7 +33,7 @@ public class LoginPage extends BrowserPage {
 	 * @return password
 	 */
 	public ITextboxActions password () {
-		return this.password;
+		return onElement (By.id ("passwd"));
 	}
 
 	/**
@@ -59,7 +41,7 @@ public class LoginPage extends BrowserPage {
 	 * @return signIn Button
 	 */
 	public IMouseActions signInButton () {
-		return this.signInButton;
+		return onElement (By.id ("SubmitLogin"));
 	}
 
 	/**
@@ -67,6 +49,6 @@ public class LoginPage extends BrowserPage {
 	 * @return signin Email
 	 */
 	public ITextboxActions signInEmail () {
-		return this.signInEmail;
+		return onElement (By.id ("email"));
 	}
 }
