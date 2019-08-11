@@ -16,7 +16,7 @@ public class MainPage extends BrowserPage {
 	 * @return action
 	 */
 	public IMouseActions signIn () {
-		return onElement (By.linkText ("Sign in"));
+		return onClickable (By.linkText ("Sign in"));
 	}
 
 }

@@ -17,7 +17,7 @@ package com.wizonsoft.guru99.pages;
 
 import org.openqa.selenium.By;
 
-import com.github.wasiqb.coteafs.selenium.core.element.IElementActions;
+import com.github.wasiqb.coteafs.selenium.core.element.IMouseActions;
 
 /**
  * @author wasiqb
@@ -29,20 +29,20 @@ public abstract class SuccessPage extends MainPage {
 	 * @since Apr 8, 2019 9:43:54 PM
 	 * @return message
 	 */
-	public IElementActions message () {
+	public IMouseActions message () {
 		return cell (0, 0);
 	}
 
-	protected IElementActions cell (final int row) {
+	protected IMouseActions cell (final int row) {
 		return cell (row, 1);
 	}
 
-	protected IElementActions cell (final int row, final int col) {
+	protected IMouseActions cell (final int row, final int col) {
 		return successTable ().finds (By.tagName ("tr"))
 			.get (row)
 			.finds (By.tagName ("td"))
 			.get (col);
 	}
 
-	protected abstract IElementActions successTable ();
+	protected abstract IMouseActions successTable ();
 }

@@ -50,7 +50,7 @@ public class NewAccountPageAction extends AbstractPageAction <NewAccountPageActi
 		acc.customerId ()
 			.enterText (value ("CustomerId"));
 		acc.accountType ()
-			.select (fake.bool ()
+			.selectByValue (fake.bool ()
 				.bool () ? "Current" : "Savings");
 		acc.initialDeposit ()
 			.enterText (fake.number ()

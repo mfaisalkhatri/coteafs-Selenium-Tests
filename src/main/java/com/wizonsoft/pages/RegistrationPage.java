@@ -3,7 +3,6 @@ package com.wizonsoft.pages;
 import org.openqa.selenium.By;
 
 import com.github.wasiqb.coteafs.selenium.core.BrowserPage;
-import com.github.wasiqb.coteafs.selenium.core.element.IElementActions;
 import com.github.wasiqb.coteafs.selenium.core.element.IMouseActions;
 import com.github.wasiqb.coteafs.selenium.core.element.ISelectboxActions;
 import com.github.wasiqb.coteafs.selenium.core.element.ITextboxActions;
@@ -19,7 +18,7 @@ public class RegistrationPage extends BrowserPage {
 	 * @return Address Line 1
 	 */
 	public ITextboxActions addressLine1 () {
-		return onElement (By.id ("address1"));
+		return onTextbox (By.id ("address1"));
 	}
 
 	/**
@@ -27,7 +26,7 @@ public class RegistrationPage extends BrowserPage {
 	 * @return address line 2
 	 */
 	public ITextboxActions addressLine2 () {
-		return onElement (By.id ("address2"));
+		return onTextbox (By.id ("address2"));
 	}
 
 	/**
@@ -35,7 +34,7 @@ public class RegistrationPage extends BrowserPage {
 	 * @return city
 	 */
 	public ITextboxActions city () {
-		return onElement (By.id ("city"));
+		return onTextbox (By.id ("city"));
 	}
 
 	/**
@@ -43,7 +42,7 @@ public class RegistrationPage extends BrowserPage {
 	 * @return company
 	 */
 	public ITextboxActions company () {
-		return onElement (By.id ("company"));
+		return onTextbox (By.id ("company"));
 	}
 
 	/**
@@ -51,15 +50,15 @@ public class RegistrationPage extends BrowserPage {
 	 * @return country
 	 */
 	public ISelectboxActions country () {
-		return onElement (By.id ("id_country"));
+		return onDropdown (By.id ("id_country"));
 	}
 
 	/**
 	 * @since Jul 11, 2019
 	 * @return element
 	 */
-	public IElementActions parentOfDay () {
-		return onElement (By.id ("uniform-days"));
+	public ISelectboxActions parentOfDay () {
+		return onDropdown (By.id ("uniform-days"));
 	}
 
 	/**
@@ -67,34 +66,15 @@ public class RegistrationPage extends BrowserPage {
 	 * @return day
 	 */
 	public ISelectboxActions day () {
-		// return onElement (By
-		// .cssSelector ("div.account_creation > div.form-group div#uniform-days >
-		// select#days"));
 		return parentOfDay ().find (By.id ("days"));
 	}
 
 	/**
-	 * @since Jun 29, 2019
-	 * @return First Name
+	 * @since Jul 13, 2019
+	 * @return parent field for months
 	 */
-	public ITextboxActions firstName () {
-		return onElement (By.id ("customer_firstname"));
-	}
-
-	/**
-	 * @since Jun 29, 2019
-	 * @return lastname
-	 */
-	public ITextboxActions lastName () {
-		return onElement (By.id ("customer_lastname"));
-	}
-
-	/**
-	 * @since Jun 29, 2019
-	 * @return mobilephone
-	 */
-	public ITextboxActions mobilePhone () {
-		return onElement (By.id ("phone_mobile"));
+	public ISelectboxActions parentOfMonths () {
+		return onDropdown (By.id ("uniform-months"));
 	}
 
 	/**
@@ -102,7 +82,31 @@ public class RegistrationPage extends BrowserPage {
 	 * @return month
 	 */
 	public ISelectboxActions month () {
-		return onElement (By.id ("months"));
+		return parentOfMonths ().find (By.id ("months"));
+	}
+
+	/**
+	 * @since Jun 29, 2019
+	 * @return First Name
+	 */
+	public ITextboxActions firstName () {
+		return onTextbox (By.id ("customer_firstname"));
+	}
+
+	/**
+	 * @since Jun 29, 2019
+	 * @return lastname
+	 */
+	public ITextboxActions lastName () {
+		return onTextbox (By.id ("customer_lastname"));
+	}
+
+	/**
+	 * @since Jun 29, 2019
+	 * @return mobilephone
+	 */
+	public ITextboxActions mobilePhone () {
+		return onTextbox (By.id ("phone_mobile"));
 	}
 
 	/**
@@ -110,7 +114,7 @@ public class RegistrationPage extends BrowserPage {
 	 * @return Mr Radio button
 	 */
 	public IMouseActions mrRadioBtn () {
-		return onElement (By.id ("uniform-id_gender1"));
+		return onClickable (By.id ("uniform-id_gender1"));
 	}
 
 	/**
@@ -118,7 +122,7 @@ public class RegistrationPage extends BrowserPage {
 	 * @return Mrs Radio button
 	 */
 	public IMouseActions mrsRadioBtn () {
-		return onElement (By.id ("uniform-id_gender2"));
+		return onClickable (By.id ("uniform-id_gender2"));
 	}
 
 	/**
@@ -126,7 +130,7 @@ public class RegistrationPage extends BrowserPage {
 	 * @return password
 	 */
 	public ITextboxActions password () {
-		return onElement (By.id ("passwd"));
+		return onTextbox (By.id ("passwd"));
 	}
 
 	/**
@@ -134,7 +138,7 @@ public class RegistrationPage extends BrowserPage {
 	 * @return receive offers
 	 */
 	public IMouseActions receiveOffers () {
-		return onElement (By.id ("optin"));
+		return onClickable (By.id ("optin"));
 	}
 
 	/**
@@ -142,7 +146,7 @@ public class RegistrationPage extends BrowserPage {
 	 * @return register button
 	 */
 	public IMouseActions registerButton () {
-		return onElement (By.id ("submitAccount"));
+		return onClickable (By.id ("submitAccount"));
 	}
 
 	/**
@@ -150,15 +154,31 @@ public class RegistrationPage extends BrowserPage {
 	 * @return signup checkbox
 	 */
 	public IMouseActions signUp () {
-		return onElement (By.id ("newsletter"));
+		return onClickable (By.id ("newsletter"));
 	}
 
 	/**
 	 * @since Jun 29, 2019
-	 * @return state
+	 * @return parent field for state
+	 */
+	public ISelectboxActions parentOfState () {
+		return onDropdown (By.id ("uniform-id_state"));
+	}
+
+	/**
+	 * @since Jul 13, 2019
+	 * @return state field
 	 */
 	public ISelectboxActions state () {
-		return onElement (By.id ("uniform-id_state"));
+		return parentOfState ().find (By.id ("id_state"));
+	}
+
+	/**
+	 * @since Jul 13, 2019
+	 * @return parent field for years
+	 */
+	public ISelectboxActions parentOfYears () {
+		return onDropdown (By.id ("uniform-years"));
 	}
 
 	/**
@@ -166,7 +186,7 @@ public class RegistrationPage extends BrowserPage {
 	 * @return year
 	 */
 	public ISelectboxActions year () {
-		return onElement (By.id ("years"));
+		return parentOfYears ().find (By.id ("years"));
 	}
 
 	/**
@@ -174,7 +194,7 @@ public class RegistrationPage extends BrowserPage {
 	 * @return zip code
 	 */
 	public ITextboxActions zipCode () {
-		return onElement (By.id ("postcode"));
+		return onTextbox (By.id ("postcode"));
 	}
 
 }

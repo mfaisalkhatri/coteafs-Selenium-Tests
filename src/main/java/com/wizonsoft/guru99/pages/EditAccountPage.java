@@ -31,7 +31,7 @@ public class EditAccountPage extends MainPage {
 	 * @return account id
 	 */
 	public ITextboxActions accountId () {
-		return onElement (By.name ("accountno"));
+		return onTextbox (By.name ("accountno"));
 	}
 
 	/**
@@ -40,6 +40,6 @@ public class EditAccountPage extends MainPage {
 	 * @return submit
 	 */
 	public IMouseActions submit () {
-		return onElement (By.name ("AccSubmit"));
+		return onClickable (By.name ("AccSubmit"));
 	}
 }

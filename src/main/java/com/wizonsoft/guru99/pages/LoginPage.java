@@ -33,7 +33,7 @@ public class LoginPage extends BrowserPage {
 	 * @return password
 	 */
 	public ITextboxActions password () {
-		return onElement (By.name ("password"));
+		return onTextbox (By.name ("password"));
 	}
 
 	/**
@@ -42,7 +42,7 @@ public class LoginPage extends BrowserPage {
 	 * @return signIn button
 	 */
 	public IMouseActions signIn () {
-		return onElement (By.name ("btnLogin"));
+		return onClickable (By.name ("btnLogin"));
 	}
 
 	/**
@@ -51,6 +51,6 @@ public class LoginPage extends BrowserPage {
 	 * @return user id
 	 */
 	public ITextboxActions userId () {
-		return onElement (By.name ("uid"));
+		return onTextbox (By.name ("uid"));
 	}
 }

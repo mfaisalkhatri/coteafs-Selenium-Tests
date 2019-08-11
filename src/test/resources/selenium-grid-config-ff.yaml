@@ -6,8 +6,8 @@ remote:
   port: 4444
   source: GRID
   capabilities:
-    browserName: chrome
-    version: 74.0.3729.169
+    browserName: firefox
+    version: "67.0"
     platform: LINUX
 params:
   user: mngr26593
