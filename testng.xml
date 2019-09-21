@@ -17,23 +17,23 @@
 		</classes>
 	</test>
 	<test name="Chrome Test" enabled="true">
-		<parameter name="test.browser" value="REMOTE" />
+		<parameter name="test.browser" value="CHROME" />
 		<classes>
 			<class name="com.wizonsoft.tests.RegisterUserTests" />
 			<class name="com.wizonsoft.tests.SignoutTests" />
 		</classes>
 	</test>
 
-	<test name="Firefox Test" enabled="true">
-		<parameter name="test.browser" value="REMOTE" />
-		<parameter name="test.config" value="/selenium-grid-config-ff.yaml" />
+	<test name="Firefox Test" enabled="false">
+		<parameter name="test.browser" value="FIREFOX" />
+		<!--  parameter name="test.config" value="/selenium-grid-config-ff.yaml" />-->
 		<classes>
 			<class name="com.wizonsoft.tests.RegisterUserTests" />
 			<class name="com.wizonsoft.tests.SignoutTests" />
 		</classes>
 	</test>
 
-	<test name="Edge Test" enabled="true">
+	<test name="Edge Test" enabled="false">
 		<parameter name="test.browser" value="EDGE"/>
 		<parameter name="test.config" value="/selenium-config.yaml" />
 		<classes>
