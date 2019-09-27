@@ -16,7 +16,7 @@ public class LoggedInPage extends BrowserPage {
 	 * @return signout
 	 */
 	public IMouseActions signOut () {
-		return onElement (By.linkText ("Sign out"));
+		return onClickable (By.linkText ("Sign out"));
 	}
 
 }

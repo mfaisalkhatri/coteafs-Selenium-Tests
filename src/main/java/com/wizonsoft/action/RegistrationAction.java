@@ -43,17 +43,15 @@ public class RegistrationAction extends AbstractPageAction <RegistrationAction> 
 			.enterText ("Pass@123");
 		final Date date = faker.date ()
 			.birthday (10, 50);
-		final DateFormat dayOfDate = new SimpleDateFormat ("dd");
-		final DateFormat monthOfDate = new SimpleDateFormat ("MM");
+		final DateFormat dayOfDate = new SimpleDateFormat ("d");
+		final DateFormat monthOfDate = new SimpleDateFormat ("M");
 		final DateFormat yearOfDate = new SimpleDateFormat ("YYYY");
 		this.register.day ()
-			.click ();
-		this.register.day ()
-			.select (dayOfDate.format (date));
+			.selectByValue (dayOfDate.format (date));
 		this.register.month ()
-			.select (monthOfDate.format (date));
+			.selectByValue (monthOfDate.format (date));
 		this.register.year ()
-			.select (yearOfDate.format (date));
+			.selectByValue (yearOfDate.format (date));
 		this.register.signUp ()
 			.click ();
 		this.register.receiveOffers ()
@@ -71,7 +69,7 @@ public class RegistrationAction extends AbstractPageAction <RegistrationAction> 
 			.enterText (faker.address ()
 				.city ());
 		this.register.state ()
-			.select (faker.address ()
+			.selectByText (faker.address ()
 				.state ());
 		this.register.zipCode ()
 			.enterText (faker.number ()

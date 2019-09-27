@@ -1,8 +1,8 @@
 package com.wizonsoft.pages;
 
+import org.openqa.selenium.By;
+
 import com.github.wasiqb.coteafs.selenium.core.BrowserPage;
-import com.github.wasiqb.coteafs.selenium.core.PageFactory;
-import com.github.wasiqb.coteafs.selenium.core.annotation.Find;
 import com.github.wasiqb.coteafs.selenium.core.element.IMouseActions;
 import com.github.wasiqb.coteafs.selenium.core.element.ISelectboxActions;
 import com.github.wasiqb.coteafs.selenium.core.element.ITextboxActions;
@@ -13,76 +13,12 @@ import com.github.wasiqb.coteafs.selenium.core.element.ITextboxActions;
  */
 public class RegistrationPage extends BrowserPage {
 
-	@Find (id = "address1")
-	private ITextboxActions		addressLine1;
-
-	@Find (id = "address2")
-	private ITextboxActions		addressLine2;
-
-	@Find (id = "city")
-	private ITextboxActions		city;
-
-	@Find (id = "company")
-	private ITextboxActions		company;
-
-	@Find (id = "id_country")
-	private ISelectboxActions	country;
-
-	@Find (css = "#uniform-days > #days")
-	private ISelectboxActions	day;
-
-	@Find (name = "customer_firstname")
-	private ITextboxActions		firstName;
-
-	@Find (name = "customer_lastname")
-	private ITextboxActions		lastName;
-
-	@Find (id = "phone_mobile")
-	private ITextboxActions		mobilePhone;
-
-	@Find (css = "#months")
-	private ISelectboxActions	month;
-
-	@Find (css = "#uniform-id_gender1")
-	private IMouseActions		mrRadioBtn;
-
-	@Find (css = "#uniform-id_gender2")
-	private IMouseActions		mrsRadioBtn;
-
-	@Find (id = "passwd")
-	private ITextboxActions		password;
-
-	@Find (id = "optin")
-	private IMouseActions		receiveOffers;
-
-	@Find (id = "submitAccount")
-	private IMouseActions		registerButton;
-
-	@Find (id = "newsletter")
-	private IMouseActions		signUp;
-
-	@Find (id = "uniform-id_state")
-	private ISelectboxActions	state;
-
-	@Find (css = "#years")
-	private ISelectboxActions	year;
-
-	@Find (id = "postcode")
-	private ITextboxActions		zipCode;
-
-	/**
-	 * @author Faisal Khatri
-	 */
-	public RegistrationPage () {
-		PageFactory.init (this);
-	}
-
 	/**
 	 * @since Jun 29, 2019
 	 * @return Address Line 1
 	 */
 	public ITextboxActions addressLine1 () {
-		return this.addressLine1;
+		return onTextbox (By.id ("address1"));
 	}
 
 	/**
@@ -90,7 +26,7 @@ public class RegistrationPage extends BrowserPage {
 	 * @return address line 2
 	 */
 	public ITextboxActions addressLine2 () {
-		return this.addressLine2;
+		return onTextbox (By.id ("address2"));
 	}
 
 	/**
@@ -98,7 +34,7 @@ public class RegistrationPage extends BrowserPage {
 	 * @return city
 	 */
 	public ITextboxActions city () {
-		return this.city;
+		return onTextbox (By.id ("city"));
 	}
 
 	/**
@@ -106,7 +42,7 @@ public class RegistrationPage extends BrowserPage {
 	 * @return company
 	 */
 	public ITextboxActions company () {
-		return this.company;
+		return onTextbox (By.id ("company"));
 	}
 
 	/**
@@ -114,7 +50,15 @@ public class RegistrationPage extends BrowserPage {
 	 * @return country
 	 */
 	public ISelectboxActions country () {
-		return this.country;
+		return onDropdown (By.id ("id_country"));
+	}
+
+	/**
+	 * @since Jul 11, 2019
+	 * @return element
+	 */
+	public ISelectboxActions parentOfDay () {
+		return onDropdown (By.id ("uniform-days"));
 	}
 
 	/**
@@ -122,31 +66,15 @@ public class RegistrationPage extends BrowserPage {
 	 * @return day
 	 */
 	public ISelectboxActions day () {
-		return this.day;
+		return parentOfDay ().find (By.id ("days"));
 	}
 
 	/**
-	 * @since Jun 29, 2019
-	 * @return First Name
+	 * @since Jul 13, 2019
+	 * @return parent field for months
 	 */
-	public ITextboxActions firstName () {
-		return this.firstName;
-	}
-
-	/**
-	 * @since Jun 29, 2019
-	 * @return lastname
-	 */
-	public ITextboxActions lastName () {
-		return this.lastName;
-	}
-
-	/**
-	 * @since Jun 29, 2019
-	 * @return mobilephone
-	 */
-	public ITextboxActions mobilePhone () {
-		return this.mobilePhone;
+	public ISelectboxActions parentOfMonths () {
+		return onDropdown (By.id ("uniform-months"));
 	}
 
 	/**
@@ -154,7 +82,31 @@ public class RegistrationPage extends BrowserPage {
 	 * @return month
 	 */
 	public ISelectboxActions month () {
-		return this.month;
+		return parentOfMonths ().find (By.id ("months"));
+	}
+
+	/**
+	 * @since Jun 29, 2019
+	 * @return First Name
+	 */
+	public ITextboxActions firstName () {
+		return onTextbox (By.id ("customer_firstname"));
+	}
+
+	/**
+	 * @since Jun 29, 2019
+	 * @return lastname
+	 */
+	public ITextboxActions lastName () {
+		return onTextbox (By.id ("customer_lastname"));
+	}
+
+	/**
+	 * @since Jun 29, 2019
+	 * @return mobilephone
+	 */
+	public ITextboxActions mobilePhone () {
+		return onTextbox (By.id ("phone_mobile"));
 	}
 
 	/**
@@ -162,7 +114,7 @@ public class RegistrationPage extends BrowserPage {
 	 * @return Mr Radio button
 	 */
 	public IMouseActions mrRadioBtn () {
-		return this.mrRadioBtn;
+		return onClickable (By.id ("uniform-id_gender1"));
 	}
 
 	/**
@@ -170,7 +122,7 @@ public class RegistrationPage extends BrowserPage {
 	 * @return Mrs Radio button
 	 */
 	public IMouseActions mrsRadioBtn () {
-		return this.mrsRadioBtn;
+		return onClickable (By.id ("uniform-id_gender2"));
 	}
 
 	/**
@@ -178,7 +130,7 @@ public class RegistrationPage extends BrowserPage {
 	 * @return password
 	 */
 	public ITextboxActions password () {
-		return this.password;
+		return onTextbox (By.id ("passwd"));
 	}
 
 	/**
@@ -186,7 +138,7 @@ public class RegistrationPage extends BrowserPage {
 	 * @return receive offers
 	 */
 	public IMouseActions receiveOffers () {
-		return this.receiveOffers;
+		return onClickable (By.id ("optin"));
 	}
 
 	/**
@@ -194,7 +146,7 @@ public class RegistrationPage extends BrowserPage {
 	 * @return register button
 	 */
 	public IMouseActions registerButton () {
-		return this.registerButton;
+		return onClickable (By.id ("submitAccount"));
 	}
 
 	/**
@@ -202,15 +154,31 @@ public class RegistrationPage extends BrowserPage {
 	 * @return signup checkbox
 	 */
 	public IMouseActions signUp () {
-		return this.signUp;
+		return onClickable (By.id ("newsletter"));
 	}
 
 	/**
 	 * @since Jun 29, 2019
-	 * @return state
+	 * @return parent field for state
+	 */
+	public ISelectboxActions parentOfState () {
+		return onDropdown (By.id ("uniform-id_state"));
+	}
+
+	/**
+	 * @since Jul 13, 2019
+	 * @return state field
 	 */
 	public ISelectboxActions state () {
-		return this.state;
+		return parentOfState ().find (By.id ("id_state"));
+	}
+
+	/**
+	 * @since Jul 13, 2019
+	 * @return parent field for years
+	 */
+	public ISelectboxActions parentOfYears () {
+		return onDropdown (By.id ("uniform-years"));
 	}
 
 	/**
@@ -218,7 +186,7 @@ public class RegistrationPage extends BrowserPage {
 	 * @return year
 	 */
 	public ISelectboxActions year () {
-		return this.year;
+		return parentOfYears ().find (By.id ("years"));
 	}
 
 	/**
@@ -226,7 +194,7 @@ public class RegistrationPage extends BrowserPage {
 	 * @return zip code
 	 */
 	public ITextboxActions zipCode () {
-		return this.zipCode;
+		return onTextbox (By.id ("postcode"));
 	}
 
 }
