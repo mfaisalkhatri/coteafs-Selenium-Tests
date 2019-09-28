@@ -43,7 +43,7 @@
 		</classes>
 	</test>
 
-	<test name="Order Test" enabled="true">
+	<test name="Test Order in Chrome" enabled="false">
 		<parameter name="test.browser" value="Chrome" />
 		<classes>
 			<class name="com.wizonsoft.tests.SigninUserTests" />
@@ -58,4 +58,20 @@
 			<class name="com.wizonsoft.tests.SignoutTests" />
 		</classes>
 	</test>
+	<test name="Test Order in Firefox" enabled="true">
+		<parameter name="test.browser" value="Firefox" />
+		<classes>
+			<class name="com.wizonsoft.tests.SigninUserTests" />
+			<class name="com.wizonsoft.tests.OrderTest">
+				<methods>
+					<include name="testOrderPlacement" />
+					<include name="testOrderConfirmation" />
+					<include name="testOrderSummary" />
+					<include name="completePayment" />
+				</methods>
+			</class>
+			<class name="com.wizonsoft.tests.SignoutTests" />
+		</classes>
+	</test>
+	
 </suite>

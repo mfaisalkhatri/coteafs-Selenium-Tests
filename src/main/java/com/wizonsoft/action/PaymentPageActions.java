@@ -42,6 +42,8 @@ public class PaymentPageActions extends AbstractPageAction <PaymentPageActions> 
 		final String successMessage = paymentPage.successMessage ()
 			.text ();
 		Assert.assertEquals (successMessage, "Your order on My Store is complete.");
+		paymentPage.onDriver ()
+		.driverWait ();
 
 	}
 

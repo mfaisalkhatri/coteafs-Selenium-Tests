@@ -55,6 +55,7 @@ public class OrderTest extends BrowserTest {
 		.addInputValue ("Size", size)
 		.perform ();
 		this.quantity = quantity;
+		this.price = orderAction.productPrice ();
 	}
 
 	/**
@@ -65,9 +66,7 @@ public class OrderTest extends BrowserTest {
 	 */
 	@Test (dependsOnMethods = "testOrderPlacement")
 	public void testOrderConfirmation () throws ParseException {
-		final OrderPageAction orderAction = new OrderPageAction ();
 		final OrderConfirmAction confirmOrder = new OrderConfirmAction ();
-		this.price = orderAction.productPrice ();
 		this.totalPrice = this.price * this.quantity;
 		this.totalSaleValue = this.totalPrice + this.shippingCharge;
 		confirmOrder.addInputValue ("Quantity", String.valueOf (this.quantity))

@@ -20,19 +20,16 @@ public class SignoutAction extends AbstractPageAction <SignoutAction> {
 
 	@Override
 	public void perform () {
-		signoutWebsite ();
-	}
-
-	private void signoutWebsite () {
-
 		this.loggedInPage.signOut ()
-			.verifyDisplayed ()
-			.isTrue ();
+		.waitUntilVisible ();
 		this.loggedInPage.signOut ()
-			.verifyText ()
-			.isEqualTo ("Sign out");
+		.verifyDisplayed ()
+		.isTrue ();
+		this.loggedInPage.signOut ()
+		.verifyText ()
+		.isEqualTo ("Sign out");
 
 		this.loggedInPage.signOut ()
-			.click ();
+		.click ();
 	}
 }
