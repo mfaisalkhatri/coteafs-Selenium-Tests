@@ -28,7 +28,6 @@ public class SignoutAction extends AbstractPageAction <SignoutAction> {
 		this.loggedInPage.signOut ()
 		.verifyText ()
 		.isEqualTo ("Sign out");
-
 		this.loggedInPage.signOut ()
 		.click ();
 	}
