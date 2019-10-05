@@ -9,6 +9,10 @@ import com.github.javafaker.Faker;
 import com.github.wasiqb.coteafs.selenium.core.page.AbstractPageAction;
 import com.wizonsoft.pages.RegistrationPage;
 
+import io.qameta.allure.Step;
+
+
+
 /**
  * @since Jun 29, 2019
  *
@@ -25,60 +29,62 @@ public class RegistrationAction extends AbstractPageAction <RegistrationAction> 
 	}
 
 	@Override
+	@Step("Enter all details for registering a new user")
 	public void perform () {
-		registerUser ();
+		this.registerUser ();
 	}
+
 
 	private void registerUser () {
 		final Faker faker = Faker.instance (Locale.US);
 		this.register.mrRadioBtn ()
-			.click ();
+		.click ();
 		this.register.firstName ()
-			.enterText (faker.name ()
-				.firstName ());
+		.enterText (faker.name ()
+			.firstName ());
 		this.register.lastName ()
-			.enterText (faker.name ()
-				.lastName ());
+		.enterText (faker.name ()
+			.lastName ());
 		this.register.password ()
-			.enterText ("Pass@123");
+		.enterText ("Pass@123");
 		final Date date = faker.date ()
 			.birthday (10, 50);
 		final DateFormat dayOfDate = new SimpleDateFormat ("d");
 		final DateFormat monthOfDate = new SimpleDateFormat ("M");
 		final DateFormat yearOfDate = new SimpleDateFormat ("YYYY");
 		this.register.day ()
-			.selectByValue (dayOfDate.format (date));
+		.selectByValue (dayOfDate.format (date));
 		this.register.month ()
-			.selectByValue (monthOfDate.format (date));
+		.selectByValue (monthOfDate.format (date));
 		this.register.year ()
-			.selectByValue (yearOfDate.format (date));
+		.selectByValue (yearOfDate.format (date));
 		this.register.signUp ()
-			.click ();
+		.click ();
 		this.register.receiveOffers ()
-			.click ();
+		.click ();
 		this.register.company ()
-			.enterText (faker.company ()
-				.name ());
+		.enterText (faker.company ()
+			.name ());
 		this.register.addressLine1 ()
-			.enterText (faker.address ()
-				.streetAddress ());
+		.enterText (faker.address ()
+			.streetAddress ());
 		this.register.addressLine2 ()
-			.enterText (faker.address ()
-				.secondaryAddress ());
+		.enterText (faker.address ()
+			.secondaryAddress ());
 		this.register.city ()
-			.enterText (faker.address ()
-				.city ());
+		.enterText (faker.address ()
+			.city ());
 		this.register.state ()
-			.selectByText (faker.address ()
-				.state ());
+		.selectByText (faker.address ()
+			.state ());
 		this.register.zipCode ()
-			.enterText (faker.number ()
-				.digits (5));
+		.enterText (faker.number ()
+			.digits (5));
 		this.register.mobilePhone ()
-			.enterText (faker.number ()
-				.digits (10));
+		.enterText (faker.number ()
+			.digits (10));
 		this.register.registerButton ()
-			.click ();
+		.click ();
 	}
 
 }

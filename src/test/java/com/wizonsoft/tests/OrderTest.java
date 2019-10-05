@@ -17,10 +17,16 @@ import com.wizonsoft.action.OrderSummaryAction;
 import com.wizonsoft.action.PaymentPageActions;
 import com.wizonsoft.action.ShippingTabAction;
 
+import io.qameta.allure.Description;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
+
 /**
  * @author Faisal Khatri
  * @since 27-Sep-2019
  */
+@Epic("Automation Framework Tests")
+@Feature ("Place Order")
 public class OrderTest extends BrowserTest {
 
 	private final double	shippingCharge	= 2.00;
@@ -49,6 +55,7 @@ public class OrderTest extends BrowserTest {
 	 * @throws ParseException
 	 */
 	@Test (dataProvider = "getOrder")
+	@Description("Test Order placement")
 	public void testOrderPlacement (final int quantity, final String size) throws ParseException {
 		final OrderPageAction orderAction = new OrderPageAction ();
 		orderAction.addInputValue ("Quantity", String.valueOf (quantity))
@@ -65,6 +72,7 @@ public class OrderTest extends BrowserTest {
 	 * Order Confirmation Test
 	 */
 	@Test (dependsOnMethods = "testOrderPlacement")
+	@Description("Test Order Confirmation")
 	public void testOrderConfirmation () throws ParseException {
 		final OrderConfirmAction confirmOrder = new OrderConfirmAction ();
 		this.totalPrice = this.price * this.quantity;
@@ -80,6 +88,7 @@ public class OrderTest extends BrowserTest {
 	 * Order Summary Test
 	 */
 	@Test (dependsOnMethods = "testOrderConfirmation")
+	@Description("Test Order Summary")
 	public void testOrderSummary () {
 		final OrderSummaryAction orderSummary = new OrderSummaryAction ();
 		final DecimalFormat df = new DecimalFormat ("0.00");
@@ -96,6 +105,7 @@ public class OrderTest extends BrowserTest {
 	 * Complete Payment
 	 */
 	@Test (dependsOnMethods = "testOrderSummary")
+	@Description("Test Complete Payment")
 	public void completePayment () {
 		final AddressTabActions addressTabActions = new AddressTabActions ();
 		addressTabActions.perform ();

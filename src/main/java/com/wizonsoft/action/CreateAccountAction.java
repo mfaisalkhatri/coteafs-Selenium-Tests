@@ -4,6 +4,8 @@ import com.github.javafaker.Faker;
 import com.github.wasiqb.coteafs.selenium.core.page.AbstractPageAction;
 import com.wizonsoft.pages.LoginPage;
 
+import io.qameta.allure.Step;
+
 /**
  * @since Jun 29, 2019
  *
@@ -20,20 +22,22 @@ public class CreateAccountAction extends AbstractPageAction <CreateAccountAction
 	}
 
 	@Override
+	@Step("Enter Email Id to create new Account")
 	public void perform () {
-		createNewLogin ();
+		this.createNewLogin ();
 	}
+
 
 	private void createNewLogin () {
 		final Faker faker = Faker.instance ();
 		this.loginPage.emailId ()
-			.click ();
+		.click ();
 		this.loginPage.emailId ()
-			.clear ();
+		.clear ();
 		this.loginPage.emailId ()
-			.enterText (faker.internet ()
-				.emailAddress ());
+		.enterText (faker.internet ()
+			.emailAddress ());
 		this.loginPage.createAccountButton ()
-			.click ();
+		.click ();
 	}
 }

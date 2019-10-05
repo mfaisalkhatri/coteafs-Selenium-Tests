@@ -5,6 +5,8 @@ import org.testng.Assert;
 import com.github.wasiqb.coteafs.selenium.core.page.AbstractPageAction;
 import com.wizonsoft.pages.PaymentPage;
 
+import io.qameta.allure.Step;
+
 /**
  * @author Faisal Khatri
  * @since 27-Sep-2019
@@ -12,6 +14,7 @@ import com.wizonsoft.pages.PaymentPage;
 public class PaymentPageActions extends AbstractPageAction <PaymentPageActions> {
 
 	@Override
+	@Step("Check the Final Order details and complete the order by paying using cheque")
 	public void perform () {
 		final PaymentPage paymentPage = new PaymentPage ();
 		final String unitPrice = paymentPage.unitPrice ()

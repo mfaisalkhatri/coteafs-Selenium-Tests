@@ -15,11 +15,10 @@
  */
 package com.wizonsoft.tests;
 
-import static com.github.wasiqb.coteafs.selenium.config.ConfigUtil.appSetting;
-
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import com.github.wasiqb.coteafs.selenium.config.ConfigUtil;
 import com.github.wasiqb.coteafs.selenium.core.BrowserTest;
 import com.wizonsoft.guru99.action.DeleteAccountPageAction;
 import com.wizonsoft.guru99.action.DeleteCustomerPageAction;
@@ -42,11 +41,12 @@ public class SeleniumTest extends BrowserTest {
 	 * @author Wasiq Bhamla
 	 * @since Aug 19, 2018 4:30:34 PM
 	 */
+
 	@BeforeClass
 	public void setupMethod () {
 		this.main = new MainPage ();
 		this.main.onDriver ()
-			.navigateTo (appSetting ().getUrl ());
+		.navigateTo (ConfigUtil.appSetting ().getUrl ());
 	}
 
 	/**
@@ -57,7 +57,7 @@ public class SeleniumTest extends BrowserTest {
 	public void testDeleteAccount () {
 		final DeleteAccountPageAction acc = new DeleteAccountPageAction ();
 		acc.addInputValue ("AccountId", this.accountId)
-			.perform ();
+		.perform ();
 	}
 
 	/**
@@ -68,7 +68,7 @@ public class SeleniumTest extends BrowserTest {
 	public void testDeleteCustomer () {
 		final DeleteCustomerPageAction acc = new DeleteCustomerPageAction ();
 		acc.addInputValue ("CustomerId", this.customerId)
-			.perform ();
+		.perform ();
 	}
 
 	/**
@@ -79,7 +79,7 @@ public class SeleniumTest extends BrowserTest {
 	public void testEditCustomer () {
 		final EditCustomerPageAction cust = new EditCustomerPageAction ();
 		cust.addInputValue ("CustomerId", this.customerId)
-			.perform ();
+		.perform ();
 	}
 
 	/**
@@ -90,7 +90,7 @@ public class SeleniumTest extends BrowserTest {
 	public void testNewAccount () {
 		final NewAccountPageAction acc = new NewAccountPageAction ();
 		acc.addInputValue ("CustomerId", this.customerId)
-			.perform ();
+		.perform ();
 
 		this.accountId = acc.accountId ();
 	}
@@ -114,10 +114,10 @@ public class SeleniumTest extends BrowserTest {
 	@Test
 	public void testSignIn () {
 		final LoginPageAction login = new LoginPageAction ();
-		login.addInputValue ("UserId", appSetting ().getParams ()
+		login.addInputValue ("UserId", ConfigUtil.appSetting ().getParams ()
 			.get ("user"))
-			.addInputValue ("Password", appSetting ().getParams ()
-				.get ("password"))
-			.perform ();
+		.addInputValue ("Password", ConfigUtil.appSetting ().getParams ()
+			.get ("password"))
+		.perform ();
 	}
 }

@@ -10,6 +10,8 @@ import com.github.wasiqb.coteafs.selenium.core.page.AbstractPageAction;
 import com.wizonsoft.pages.MainPage;
 import com.wizonsoft.pages.OrderPage;
 
+import io.qameta.allure.Step;
+
 /**
  * @author Faisal Khatri
  * @since 27-Sep-2019
@@ -29,6 +31,7 @@ public class OrderPageAction extends AbstractPageAction <OrderPageAction> {
 	}
 
 	@Override
+	@Step("Place an Order from menu -> Women > T-shirts")
 	public void perform (){
 		this.mainPage.openMenu ("WOMEN", "T-shirts")
 		.click ();
@@ -73,6 +76,7 @@ public class OrderPageAction extends AbstractPageAction <OrderPageAction> {
 	 * @return product Price
 	 * @throws ParseException
 	 */
+	@Step("Return the product price from Order placing page")
 	public double productPrice () throws ParseException {
 		final String orderPrice = this.orderPage.productPrice ().text ();
 		final NumberFormat format = NumberFormat.getCurrencyInstance (Locale.US);

@@ -5,6 +5,8 @@ import org.testng.Assert;
 import com.github.wasiqb.coteafs.selenium.core.page.AbstractPageAction;
 import com.wizonsoft.pages.OrderConfirmPage;
 
+import io.qameta.allure.Step;
+
 
 /**
  * @author Faisal Khatri
@@ -13,6 +15,7 @@ import com.wizonsoft.pages.OrderConfirmPage;
 public class OrderConfirmAction extends AbstractPageAction <OrderConfirmAction>{
 
 	@Override
+	@Step("Verifying the Order is placed correcly as placed from order placing window")
 	public void perform () {
 		final OrderConfirmPage confirmPage = new OrderConfirmPage ();
 		final String confirmMessage = confirmPage.confirmMessage ().text ();
