@@ -22,7 +22,11 @@ playback:
 #    height: 768
   delays:
     implicit: 60
+<<<<<<< HEAD
+    explicit: 30
+=======
     explicit: 10
+>>>>>>> 77273ba5f999af902ed80aa6d745c07302476242
     before_key_press: 0
     after_key_press: 0
     before_mouse_move: 0

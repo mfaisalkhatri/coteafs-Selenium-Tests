@@ -3,6 +3,8 @@ package com.wizonsoft.action;
 import com.github.wasiqb.coteafs.selenium.core.page.AbstractPageAction;
 import com.wizonsoft.pages.LoggedInPage;
 
+import io.qameta.allure.Step;
+
 /**
  * @since Jun 29, 2019
  *
@@ -19,20 +21,29 @@ public class SignoutAction extends AbstractPageAction <SignoutAction> {
 	}
 
 	@Override
+	@Step("Sign out of the website")
 	public void perform () {
-		signoutWebsite ();
+		this.signoutWebsite ();
 	}
 
 	private void signoutWebsite () {
 
 		this.loggedInPage.signOut ()
-			.verifyDisplayed ()
-			.isTrue ();
+		.verifyDisplayed ()
+		.isTrue ();
 		this.loggedInPage.signOut ()
-			.verifyText ()
-			.isEqualTo ("Sign out");
+		.verifyText ()
+		.isEqualTo ("Sign out");
 
 		this.loggedInPage.signOut ()
-			.click ();
+		.waitUntilVisible ();
+		this.loggedInPage.signOut ()
+		.verifyDisplayed ()
+		.isTrue ();
+		this.loggedInPage.signOut ()
+		.verifyText ()
+		.isEqualTo ("Sign out");
+		this.loggedInPage.signOut ()
+		.click ();
 	}
 }

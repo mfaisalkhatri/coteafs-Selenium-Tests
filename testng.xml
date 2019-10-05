@@ -43,10 +43,12 @@
 		</classes>
 	</test>
 
-	<test name="Order Test" enabled="true">
+<<<<<<< HEAD
+	<test name="Test Order in Chrome" enabled="true">
 		<parameter name="test.browser" value="Chrome" />
 		<classes>
-			<class name="com.wizonsoft.tests.SigninUserTests" />
+			<!--   <class name="com.wizonsoft.tests.SigninUserTests" />-->
+			<class name="com.wizonsoft.tests.RegisterUserTests" />
 			<class name="com.wizonsoft.tests.OrderTest">
 				<methods>
 					<include name="testOrderPlacement" />
@@ -58,4 +60,30 @@
 			<class name="com.wizonsoft.tests.SignoutTests" />
 		</classes>
 	</test>
+	<test name="Test Order in Firefox" enabled="false">
+		<parameter name="test.browser" value="Firefox" />
+		<classes>
+			<!--   <class name="com.wizonsoft.tests.SigninUserTests" />-->
+			<class name="com.wizonsoft.tests.RegisterUserTests" />
+=======
+	<test name="Order Test" enabled="true">
+		<parameter name="test.browser" value="Chrome" />
+		<classes>
+			<class name="com.wizonsoft.tests.SigninUserTests" />
+>>>>>>> 77273ba5f999af902ed80aa6d745c07302476242
+			<class name="com.wizonsoft.tests.OrderTest">
+				<methods>
+					<include name="testOrderPlacement" />
+					<include name="testOrderConfirmation" />
+					<include name="testOrderSummary" />
+					<include name="completePayment" />
+				</methods>
+			</class>
+			<class name="com.wizonsoft.tests.SignoutTests" />
+		</classes>
+	</test>
+<<<<<<< HEAD
+	
+=======
+>>>>>>> 77273ba5f999af902ed80aa6d745c07302476242
 </suite>
