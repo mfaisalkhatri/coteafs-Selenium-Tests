@@ -8,6 +8,7 @@ import com.wizonsoft.pages.OrderConfirmPage;
 import io.qameta.allure.Step;
 
 
+
 /**
  * @author Faisal Khatri
  * @since 27-Sep-2019
@@ -15,6 +16,7 @@ import io.qameta.allure.Step;
 public class OrderConfirmAction extends AbstractPageAction <OrderConfirmAction>{
 
 	@Override
+
 	@Step("Verifying the Order is placed correcly as placed from order placing window")
 	public void perform () {
 		final OrderConfirmPage confirmPage = new OrderConfirmPage ();

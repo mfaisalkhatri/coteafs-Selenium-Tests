@@ -11,8 +11,6 @@ import com.wizonsoft.pages.RegistrationPage;
 
 import io.qameta.allure.Step;
 
-
-
 /**
  * @since Jun 29, 2019
  *
@@ -29,11 +27,10 @@ public class RegistrationAction extends AbstractPageAction <RegistrationAction> 
 	}
 
 	@Override
-	@Step("Enter all details for registering a new user")
+	@Step ("Enter all details for registering a new user")
 	public void perform () {
 		this.registerUser ();
 	}
-
 
 	private void registerUser () {
 		final Faker faker = Faker.instance (Locale.US);
@@ -58,6 +55,11 @@ public class RegistrationAction extends AbstractPageAction <RegistrationAction> 
 		.selectByValue (monthOfDate.format (date));
 		this.register.year ()
 		.selectByValue (yearOfDate.format (date));
+		this.register.month ()
+		.selectByValue (monthOfDate.format (date));
+		this.register.year ()
+		.selectByValue (yearOfDate.format (date));
+
 		this.register.signUp ()
 		.click ();
 		this.register.receiveOffers ()

@@ -76,6 +76,7 @@ public class OrderPageAction extends AbstractPageAction <OrderPageAction> {
 	 * @return product Price
 	 * @throws ParseException
 	 */
+
 	@Step("Return the product price from Order placing page")
 	public double productPrice () throws ParseException {
 		final String orderPrice = this.orderPage.productPrice ().text ();

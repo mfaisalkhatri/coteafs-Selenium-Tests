@@ -23,6 +23,18 @@ public class SignoutAction extends AbstractPageAction <SignoutAction> {
 	@Override
 	@Step("Sign out of the website")
 	public void perform () {
+		this.signoutWebsite ();
+	}
+
+	private void signoutWebsite () {
+
+		this.loggedInPage.signOut ()
+		.verifyDisplayed ()
+		.isTrue ();
+		this.loggedInPage.signOut ()
+		.verifyText ()
+		.isEqualTo ("Sign out");
+
 		this.loggedInPage.signOut ()
 		.waitUntilVisible ();
 		this.loggedInPage.signOut ()

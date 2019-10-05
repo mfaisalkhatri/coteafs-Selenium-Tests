@@ -17,16 +17,22 @@ import com.wizonsoft.action.OrderSummaryAction;
 import com.wizonsoft.action.PaymentPageActions;
 import com.wizonsoft.action.ShippingTabAction;
 
+<<<<<<< HEAD
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
 
+=======
+>>>>>>> 77273ba5f999af902ed80aa6d745c07302476242
 /**
  * @author Faisal Khatri
  * @since 27-Sep-2019
  */
+<<<<<<< HEAD
 @Epic("Automation Framework Tests")
 @Feature ("Place Order")
+=======
+>>>>>>> 77273ba5f999af902ed80aa6d745c07302476242
 public class OrderTest extends BrowserTest {
 
 	private final double	shippingCharge	= 2.00;
@@ -55,14 +61,20 @@ public class OrderTest extends BrowserTest {
 	 * @throws ParseException
 	 */
 	@Test (dataProvider = "getOrder")
+<<<<<<< HEAD
 	@Description("Test Order placement")
+=======
+>>>>>>> 77273ba5f999af902ed80aa6d745c07302476242
 	public void testOrderPlacement (final int quantity, final String size) throws ParseException {
 		final OrderPageAction orderAction = new OrderPageAction ();
 		orderAction.addInputValue ("Quantity", String.valueOf (quantity))
 		.addInputValue ("Size", size)
 		.perform ();
 		this.quantity = quantity;
+<<<<<<< HEAD
 		this.price = orderAction.productPrice ();
+=======
+>>>>>>> 77273ba5f999af902ed80aa6d745c07302476242
 	}
 
 	/**
@@ -72,9 +84,16 @@ public class OrderTest extends BrowserTest {
 	 * Order Confirmation Test
 	 */
 	@Test (dependsOnMethods = "testOrderPlacement")
+<<<<<<< HEAD
 	@Description("Test Order Confirmation")
 	public void testOrderConfirmation () throws ParseException {
 		final OrderConfirmAction confirmOrder = new OrderConfirmAction ();
+=======
+	public void testOrderConfirmation () throws ParseException {
+		final OrderPageAction orderAction = new OrderPageAction ();
+		final OrderConfirmAction confirmOrder = new OrderConfirmAction ();
+		this.price = orderAction.productPrice ();
+>>>>>>> 77273ba5f999af902ed80aa6d745c07302476242
 		this.totalPrice = this.price * this.quantity;
 		this.totalSaleValue = this.totalPrice + this.shippingCharge;
 		confirmOrder.addInputValue ("Quantity", String.valueOf (this.quantity))
@@ -88,7 +107,10 @@ public class OrderTest extends BrowserTest {
 	 * Order Summary Test
 	 */
 	@Test (dependsOnMethods = "testOrderConfirmation")
+<<<<<<< HEAD
 	@Description("Test Order Summary")
+=======
+>>>>>>> 77273ba5f999af902ed80aa6d745c07302476242
 	public void testOrderSummary () {
 		final OrderSummaryAction orderSummary = new OrderSummaryAction ();
 		final DecimalFormat df = new DecimalFormat ("0.00");
@@ -105,7 +127,10 @@ public class OrderTest extends BrowserTest {
 	 * Complete Payment
 	 */
 	@Test (dependsOnMethods = "testOrderSummary")
+<<<<<<< HEAD
 	@Description("Test Complete Payment")
+=======
+>>>>>>> 77273ba5f999af902ed80aa6d745c07302476242
 	public void completePayment () {
 		final AddressTabActions addressTabActions = new AddressTabActions ();
 		addressTabActions.perform ();

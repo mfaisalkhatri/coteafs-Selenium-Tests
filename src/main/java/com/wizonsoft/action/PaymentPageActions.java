@@ -4,8 +4,8 @@ import org.testng.Assert;
 
 import com.github.wasiqb.coteafs.selenium.core.page.AbstractPageAction;
 import com.wizonsoft.pages.PaymentPage;
-
 import io.qameta.allure.Step;
+
 
 /**
  * @author Faisal Khatri
@@ -14,6 +14,7 @@ import io.qameta.allure.Step;
 public class PaymentPageActions extends AbstractPageAction <PaymentPageActions> {
 
 	@Override
+
 	@Step("Check the Final Order details and complete the order by paying using cheque")
 	public void perform () {
 		final PaymentPage paymentPage = new PaymentPage ();
@@ -45,8 +46,11 @@ public class PaymentPageActions extends AbstractPageAction <PaymentPageActions> 
 		final String successMessage = paymentPage.successMessage ()
 			.text ();
 		Assert.assertEquals (successMessage, "Your order on My Store is complete.");
+		<<<<<<< HEAD
 		paymentPage.onDriver ()
-		.driverWait ();
+		.driverWait ()
+		=======
+		>>>>>>> 77273ba5f999af902ed80aa6d745c07302476242
 
 	}
 

@@ -46,7 +46,9 @@ public class SeleniumTest extends BrowserTest {
 	public void setupMethod () {
 		this.main = new MainPage ();
 		this.main.onDriver ()
-		.navigateTo (ConfigUtil.appSetting ().getUrl ());
+		.navigateTo (ConfigUtil.appSetting ()
+			.getUrl ());
+
 	}
 
 	/**
@@ -58,6 +60,7 @@ public class SeleniumTest extends BrowserTest {
 		final DeleteAccountPageAction acc = new DeleteAccountPageAction ();
 		acc.addInputValue ("AccountId", this.accountId)
 		.perform ();
+
 	}
 
 	/**
@@ -80,6 +83,7 @@ public class SeleniumTest extends BrowserTest {
 		final EditCustomerPageAction cust = new EditCustomerPageAction ();
 		cust.addInputValue ("CustomerId", this.customerId)
 		.perform ();
+
 	}
 
 	/**
@@ -114,9 +118,12 @@ public class SeleniumTest extends BrowserTest {
 	@Test
 	public void testSignIn () {
 		final LoginPageAction login = new LoginPageAction ();
-		login.addInputValue ("UserId", ConfigUtil.appSetting ().getParams ()
+
+		login.addInputValue ("UserId", ConfigUtil.appSetting ()
+			.getParams ()
 			.get ("user"))
-		.addInputValue ("Password", ConfigUtil.appSetting ().getParams ()
+		.addInputValue ("Password", ConfigUtil.appSetting ()
+			.getParams ()
 			.get ("password"))
 		.perform ();
 	}

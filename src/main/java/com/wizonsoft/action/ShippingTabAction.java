@@ -12,7 +12,9 @@ import io.qameta.allure.Step;
 public class ShippingTabAction extends AbstractPageAction <ShippingTabAction>{
 
 	@Override
+
 	@Step("Agree the terms and Proceed to checkout from Shipping Tab")
+
 	public void perform () {
 		final ShippingTabPage shippingTab = new ShippingTabPage ();
 		shippingTab.agreeTerms ().click ();

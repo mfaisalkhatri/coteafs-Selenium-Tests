@@ -7,6 +7,7 @@ import com.wizonsoft.pages.OrderSummaryPage;
 
 import io.qameta.allure.Step;
 
+
 /**
  * @author Faisal Khatri
  * @since 27-Sep-2019
@@ -14,7 +15,9 @@ import io.qameta.allure.Step;
 public class OrderSummaryAction extends AbstractPageAction <OrderSummaryAction> {
 
 	@Override
+
 	@Step("Checking the Order Summary page and asserting values are displayed correclty as per order placed")
+
 	public void perform () {
 		final OrderSummaryPage orderSummary = new OrderSummaryPage ();
 		final String unitPrice = orderSummary.unitPrice ()
