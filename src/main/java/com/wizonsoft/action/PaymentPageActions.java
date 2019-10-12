@@ -4,6 +4,7 @@ import org.testng.Assert;
 
 import com.github.wasiqb.coteafs.selenium.core.page.AbstractPageAction;
 import com.wizonsoft.pages.PaymentPage;
+
 import io.qameta.allure.Step;
 
 
@@ -46,12 +47,9 @@ public class PaymentPageActions extends AbstractPageAction <PaymentPageActions> 
 		final String successMessage = paymentPage.successMessage ()
 			.text ();
 		Assert.assertEquals (successMessage, "Your order on My Store is complete.");
-		<<<<<<< HEAD
-		paymentPage.onDriver ()
-		.driverWait ()
-		=======
-		>>>>>>> 77273ba5f999af902ed80aa6d745c07302476242
 
+		paymentPage.onDriver ()
+		.driverWait ();
 	}
 
 }
