@@ -26,7 +26,7 @@ import io.qameta.allure.Feature;
  * @since 27-Sep-2019
  */
 
-@Epic("Automation Framework Tests")
+@Epic ("Automation Framework Tests")
 @Feature ("Place Order")
 
 public class OrderTest extends BrowserTest {
@@ -57,20 +57,14 @@ public class OrderTest extends BrowserTest {
 	 * @throws ParseException
 	 */
 	@Test (dataProvider = "getOrder")
-	<<<<<<< HEAD
 	@Description("Test Order placement")
-	=======
-	>>>>>>> 77273ba5f999af902ed80aa6d745c07302476242
 	public void testOrderPlacement (final int quantity, final String size) throws ParseException {
 		final OrderPageAction orderAction = new OrderPageAction ();
 		orderAction.addInputValue ("Quantity", String.valueOf (quantity))
 		.addInputValue ("Size", size)
 		.perform ();
 		this.quantity = quantity;
-		<<<<<<< HEAD
-		this.price = orderAction.productPrice ()
-		=======
-		>>>>>>> 77273ba5f999af902ed80aa6d745c07302476242
+		this.price = orderAction.productPrice ();
 	}
 
 	/**
@@ -80,70 +74,62 @@ public class OrderTest extends BrowserTest {
 	 * Order Confirmation Test
 	 */
 	@Test (dependsOnMethods = "testOrderPlacement")
-	<<<<<<< HEAD
-	@Description("Test Order Confirmation")
+
+	@Description ("Test Order Confirmation")
 	public void testOrderConfirmation () throws ParseException {
+		final OrderPageAction orderAction = new OrderPageAction ();
 		final OrderConfirmAction confirmOrder = new OrderConfirmAction ();
-		=======
-			public void testOrderConfirmation () throws ParseException {
-			final OrderPageAction orderAction = new OrderPageAction ();
-			final OrderConfirmAction confirmOrder = new OrderConfirmAction ();
-			this.price = orderAction.productPrice ();
-			>>>>>>> 77273ba5f999af902ed80aa6d745c07302476242
-	this.totalPrice = this.price * this.quantity;
-	this.totalSaleValue = this.totalPrice + this.shippingCharge;
-	confirmOrder.addInputValue ("Quantity", String.valueOf (this.quantity))
-	.addInputValue ("Total", this.dollarSign + this.totalPrice)
-	.addInputValue ("TotalProducts", this.dollarSign + this.totalPrice)
-	.addInputValue ("TotalSaleValue", this.dollarSign + this.totalSaleValue)
-	.perform ();
-		}
+		this.price = orderAction.productPrice ();
+		this.totalPrice = this.price * this.quantity;
+		this.totalSaleValue = this.totalPrice + this.shippingCharge;
+		confirmOrder.addInputValue ("Quantity", String.valueOf (this.quantity))
+		.addInputValue ("Total", this.dollarSign + this.totalPrice)
+		.addInputValue ("TotalProducts", this.dollarSign + this.totalPrice)
+		.addInputValue ("TotalSaleValue", this.dollarSign + this.totalSaleValue)
+		.perform ();
+	}
 
-		/**
-		 * Order Summary Test
-		 */
-		@Test (dependsOnMethods = "testOrderConfirmation")
-		<<<<<<< HEAD
-		@Description("Test Order Summary")
-		=======
-		>>>>>>> 77273ba5f999af902ed80aa6d745c07302476242
-		public void testOrderSummary () {
-			final OrderSummaryAction orderSummary = new OrderSummaryAction ();
-			final DecimalFormat df = new DecimalFormat ("0.00");
-			orderSummary.addInputValue ("Unit Price", this.dollarSign + this.price)
-			.addInputValue ("Quantity", String.valueOf (this.quantity))
-			.addInputValue ("Total Price", this.dollarSign + this.totalPrice)
-			.addInputValue ("Total Products", this.dollarSign + this.totalPrice)
-			.addInputValue ("Total Shipping", this.dollarSign + df.format (this.shippingCharge))
-			.addInputValue ("Grand Total", this.dollarSign + this.totalSaleValue)
-			.perform ();
-		}
+	/**
+	 * Order Summary Test
+	 */
+	@Test (dependsOnMethods = "testOrderConfirmation")
 
-		/**
-		 * Complete Payment
-		 */
-		@Test (dependsOnMethods = "testOrderSummary")
-		<<<<<<< HEAD
-		@Description("Test Complete Payment")
-		=======
-		>>>>>>> 77273ba5f999af902ed80aa6d745c07302476242
-		public void completePayment () {
-			final AddressTabActions addressTabActions = new AddressTabActions ();
-			addressTabActions.perform ();
+	@Description ("Test Order Summary")
 
-			final ShippingTabAction shippingTabActions = new ShippingTabAction ();
-			shippingTabActions.perform ();
+	public void testOrderSummary () {
+		final OrderSummaryAction orderSummary = new OrderSummaryAction ();
+		final DecimalFormat df = new DecimalFormat ("0.00");
+		orderSummary.addInputValue ("Unit Price", this.dollarSign + this.price)
+		.addInputValue ("Quantity", String.valueOf (this.quantity))
+		.addInputValue ("Total Price", this.dollarSign + this.totalPrice)
+		.addInputValue ("Total Products", this.dollarSign + this.totalPrice)
+		.addInputValue ("Total Shipping", this.dollarSign + df.format (this.shippingCharge))
+		.addInputValue ("Grand Total", this.dollarSign + this.totalSaleValue)
+		.perform ();
+	}
 
-			final PaymentPageActions paymentActions = new PaymentPageActions ();
-			final DecimalFormat df = new DecimalFormat ("0.00");
+	/**
+	 * Complete Payment
+	 */
+	@Test (dependsOnMethods = "testOrderSummary")
+	@Description ("Test Complete Payment")
+	public void completePayment () {
+		final AddressTabActions addressTabActions = new AddressTabActions ();
+		addressTabActions.perform ();
 
-			paymentActions.addInputValue ("Unit Price", this.dollarSign + this.price)
-			.addInputValue ("Quantity", String.valueOf (this.quantity))
-			.addInputValue ("Total Price", this.dollarSign + this.totalPrice)
-			.addInputValue ("Total Shipping", this.dollarSign + df.format (this.shippingCharge))
-			.addInputValue ("Grand Total", this.dollarSign + this.totalSaleValue)
-			.perform ();
+		final ShippingTabAction shippingTabActions = new ShippingTabAction ();
+		shippingTabActions.perform ();
 
-		}
+		final PaymentPageActions paymentActions = new PaymentPageActions ();
+		final DecimalFormat df = new DecimalFormat ("0.00");
+
+		paymentActions.addInputValue ("Unit Price", this.dollarSign + this.price)
+		.addInputValue ("Quantity", String.valueOf (this.quantity))
+		.addInputValue ("Total Price", this.dollarSign + this.totalPrice)
+		.addInputValue ("Total Shipping", this.dollarSign + df.format (this.shippingCharge))
+		.addInputValue ("Grand Total", this.dollarSign + this.totalSaleValue)
+		.perform ();
 
 	}
+
+}
