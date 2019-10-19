@@ -9,5 +9,6 @@
 /.classpath
 /.project
 /.idea/
+/allure-results/
 *.iml
 .DS_Store
