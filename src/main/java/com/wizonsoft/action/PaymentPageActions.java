@@ -7,7 +7,6 @@ import com.wizonsoft.pages.PaymentPage;
 
 import io.qameta.allure.Step;
 
-
 /**
  * @author Faisal Khatri
  * @since 27-Sep-2019
@@ -16,7 +15,7 @@ public class PaymentPageActions extends AbstractPageAction <PaymentPageActions> 
 
 	@Override
 
-	@Step("Check the Final Order details and complete the order by paying using cheque")
+	@Step ("Check the Final Order details and complete the order by paying using cheque")
 	public void perform () {
 		final PaymentPage paymentPage = new PaymentPage ();
 		final String unitPrice = paymentPage.unitPrice ()
@@ -40,16 +39,15 @@ public class PaymentPageActions extends AbstractPageAction <PaymentPageActions> 
 		Assert.assertEquals (grandTotal, this.value ("Grand Total"));
 
 		paymentPage.payBycheck ()
-		.click ();
+			.click ();
 
 		paymentPage.confirmPayment ()
-		.click ();
+			.click ();
 		final String successMessage = paymentPage.successMessage ()
 			.text ();
 		Assert.assertEquals (successMessage, "Your order on My Store is complete.");
-
 		paymentPage.onDriver ()
-		.driverWait ();
+			.driverWait ();
 	}
 
 }

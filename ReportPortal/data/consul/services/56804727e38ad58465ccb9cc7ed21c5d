@@ -1,0 +1,1 @@
+{"Token":"","Service":{"ID":"index-bcda5d8c9628-8080","Service":"index","Tags":["urlprefix-/","traefik.frontend.rule=PathPrefix:/","traefik.backend=index","statusPageUrlPath=/info","healthCheckUrlPath=/health"],"Address":"172.18.0.8","Port":8080,"EnableTagOverride":false,"CreateIndex":0,"ModifyIndex":0}}
