@@ -1,0 +1,1 @@
+{"Token":"","Service":{"ID":"ui-814273c603e3-8080","Service":"ui","Tags":["urlprefix-/ui/ opts strip=/ui","traefik.frontend.rule=PathPrefixStrip:/ui/","statusPageUrlPath=/info","healthCheckUrlPath=/health"],"Address":"172.18.0.7","Port":8080,"EnableTagOverride":false,"CreateIndex":0,"ModifyIndex":0}}

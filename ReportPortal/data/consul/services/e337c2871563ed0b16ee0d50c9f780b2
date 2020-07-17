@@ -1,0 +1,1 @@
+{"Token":"","Service":{"ID":"api-ce050d4b7182c5fd3672510a6a1b1fe9","Service":"api","Tags":["urlprefix-/api/v1","traefik.frontend.rule=PathPrefix:/api/v1","statusPageUrlPath=/api/v1/admin/info","healthCheckUrlPath=/api/v1/admin/health","contextPath=/api/v1"],"Address":"0a14e10a109a","Port":8080,"EnableTagOverride":false,"CreateIndex":0,"ModifyIndex":0}}

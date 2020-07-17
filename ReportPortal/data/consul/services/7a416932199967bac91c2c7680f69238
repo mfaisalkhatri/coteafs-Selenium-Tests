@@ -1,0 +1,1 @@
+{"Token":"","Service":{"ID":"jira-a372a931d5ce29bb6cde7aefc108f17e","Service":"jira","Tags":["urlprefix-/jira opts strip=/jira","traefik.frontend.rule=PathPrefixStrip:/jira","statusPageUrlPath=/info","healthCheckUrlPath=/health","extension=jira"],"Address":"4d817d611f90","Port":8080,"EnableTagOverride":false,"CreateIndex":0,"ModifyIndex":0}}

@@ -1,0 +1,1 @@
+{"Token":"","Service":{"ID":"rally-12ed4247bd3f2760f9c34f0ffe6839c7","Service":"rally","Tags":["urlprefix-/rally opts strip=/rally","traefik.frontend.rule=PathPrefixStrip:/rally","statusPageUrlPath=/info","healthCheckUrlPath=/health","extension=rally"],"Address":"416041b0b221","Port":8080,"EnableTagOverride":false,"CreateIndex":0,"ModifyIndex":0}}

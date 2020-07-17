@@ -1,0 +1,20 @@
+alive: ef95b1fa341c 172.18.0.5:8301
+event-clock: 1
+alive: e60ef0091332 172.18.0.3:8301
+event-clock: 2
+alive: e60ef0091332 172.18.0.7:8301
+event-clock: 3
+alive: e60ef0091332 172.18.0.7:8301
+event-clock: 4
+alive: e60ef0091332 172.18.0.5:8301
+event-clock: 5
+alive: e60ef0091332 172.18.0.8:8301
+event-clock: 6
+alive: e60ef0091332 172.18.0.10:8301
+event-clock: 7
+leave
+clock: 1
+alive: e60ef0091332 172.18.0.9:8301
+event-clock: 1
+alive: e60ef0091332 172.18.0.4:8301
+event-clock: 2

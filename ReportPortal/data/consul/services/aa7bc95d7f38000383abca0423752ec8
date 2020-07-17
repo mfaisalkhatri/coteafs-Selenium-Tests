@@ -1,0 +1,1 @@
+{"Token":"","Service":{"ID":"uat-ddefa9b107f928b4666e50126bc387f1","Service":"uat","Tags":["urlprefix-/uat opts strip=/uat","traefik.frontend.rule=PathPrefixStrip:/uat","statusPageUrlPath=/info","healthCheckUrlPath=/health"],"Address":"0ec3c321ba9e","Port":8080,"EnableTagOverride":false,"CreateIndex":0,"ModifyIndex":0}}

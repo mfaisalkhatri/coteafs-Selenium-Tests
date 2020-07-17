@@ -1,8 +1,10 @@
 package com.wizonsoft.tests;
 
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+import com.epam.reportportal.testng.ReportPortalTestNGListener;
 import com.github.wasiqb.coteafs.selenium.config.ConfigUtil;
 import com.github.wasiqb.coteafs.selenium.core.BrowserTest;
 import com.wizonsoft.action.CreateAccountAction;
@@ -20,14 +22,15 @@ import io.qameta.allure.Step;
  *
  */
 @Epic ("Automation Framework tests")
-@Feature("User Registration")
+@Feature ("User Registration")
+@Listeners ({ ReportPortalTestNGListener.class })
 public class RegisterUserTests extends BrowserTest {
 
 	/**
 	 * @since Jun 29, 2019
 	 */
 	@Test
-	@Description("Test for creating a new account")
+	@Description ("Test for creating a new account")
 	public void registerUserTest () {
 		final CreateAccountAction createAccount = new CreateAccountAction ();
 		createAccount.perform ();
@@ -40,11 +43,12 @@ public class RegisterUserTests extends BrowserTest {
 	 */
 
 	@BeforeTest
-	@Step("Setup browser to run the tests")
+	@Step ("Setup browser to run the tests")
 	public void setupMethod () {
 		final MainPage mainPage = new MainPage ();
 		mainPage.onDriver ()
-		.navigateTo (ConfigUtil.appSetting ().getUrl ());
+			.navigateTo (ConfigUtil.appSetting ()
+				.getUrl ());
 		final MainPageAction mainPageAction = new MainPageAction ();
 		mainPageAction.perform ();
 	}

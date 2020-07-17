@@ -11,6 +11,17 @@
 	<name>coteafs-selenium-tests</name>
 	<url>http://maven.apache.org</url>
 
+	<repositories>
+		<repository>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+			<id>bintray-epam-reportportal</id>
+			<name>bintray</name>
+			<url>http://dl.bintray.com/epam/reportportal</url>
+		</repository>
+	</repositories>
+
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>1.8</maven.compiler.source>
@@ -36,7 +47,7 @@
 		<dependency>
 			<groupId>com.github.wasiqb.coteafs</groupId>
 			<artifactId>selenium</artifactId>
-			<version>3.0.0-beta1</version>
+			<version>3.0.0</version>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 		<dependency>
@@ -55,8 +66,18 @@
 			<artifactId>aspectjweaver</artifactId>
 			<version>${aspectj.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>com.epam.reportportal</groupId>
+			<artifactId>agent-java-testng</artifactId>
+			<version>4.2.1</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>2.10.3</version>
+		</dependency>
 	</dependencies>
-
 
 	<build>
 		<plugins>
