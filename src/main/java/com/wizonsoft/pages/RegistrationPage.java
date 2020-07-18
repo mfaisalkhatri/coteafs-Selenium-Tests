@@ -18,7 +18,7 @@ public class RegistrationPage extends BrowserPage {
 	 * @return Address Line 1
 	 */
 	public ITextboxActions addressLine1 () {
-		return onTextbox (By.id ("address1"));
+		return onTextbox (By.id ("address1"), "Address Line 1");
 	}
 
 	/**
@@ -26,7 +26,7 @@ public class RegistrationPage extends BrowserPage {
 	 * @return address line 2
 	 */
 	public ITextboxActions addressLine2 () {
-		return onTextbox (By.id ("address2"));
+		return onTextbox (By.id ("address2"), "Address Line 2");
 	}
 
 	/**
@@ -34,7 +34,7 @@ public class RegistrationPage extends BrowserPage {
 	 * @return city
 	 */
 	public ITextboxActions city () {
-		return onTextbox (By.id ("city"));
+		return onTextbox (By.id ("city"), "City");
 	}
 
 	/**
@@ -42,7 +42,7 @@ public class RegistrationPage extends BrowserPage {
 	 * @return company
 	 */
 	public ITextboxActions company () {
-		return onTextbox (By.id ("company"));
+		return onTextbox (By.id ("company"), "Company");
 	}
 
 	/**
@@ -50,7 +50,7 @@ public class RegistrationPage extends BrowserPage {
 	 * @return country
 	 */
 	public ISelectboxActions country () {
-		return onDropdown (By.id ("id_country"));
+		return onDropdown (By.id ("id_country"), "Country");
 	}
 
 	/**
@@ -58,7 +58,7 @@ public class RegistrationPage extends BrowserPage {
 	 * @return element
 	 */
 	public ISelectboxActions parentOfDay () {
-		return onDropdown (By.id ("uniform-days"));
+		return onDropdown (By.id ("uniform-days"), "Parent of Day");
 	}
 
 	/**
@@ -66,7 +66,7 @@ public class RegistrationPage extends BrowserPage {
 	 * @return day
 	 */
 	public ISelectboxActions day () {
-		return parentOfDay ().find (By.id ("days"));
+		return parentOfDay ().find (By.id ("days"), "Day");
 	}
 
 	/**
@@ -74,7 +74,7 @@ public class RegistrationPage extends BrowserPage {
 	 * @return parent field for months
 	 */
 	public ISelectboxActions parentOfMonths () {
-		return onDropdown (By.id ("uniform-months"));
+		return onDropdown (By.id ("uniform-months"), "Parent of Months");
 	}
 
 	/**
@@ -82,7 +82,7 @@ public class RegistrationPage extends BrowserPage {
 	 * @return month
 	 */
 	public ISelectboxActions month () {
-		return parentOfMonths ().find (By.id ("months"));
+		return parentOfMonths ().find (By.id ("months"), "Month");
 	}
 
 	/**
@@ -90,7 +90,7 @@ public class RegistrationPage extends BrowserPage {
 	 * @return First Name
 	 */
 	public ITextboxActions firstName () {
-		return onTextbox (By.id ("customer_firstname"));
+		return onTextbox (By.id ("customer_firstname"), "First Name");
 	}
 
 	/**
@@ -98,7 +98,7 @@ public class RegistrationPage extends BrowserPage {
 	 * @return lastname
 	 */
 	public ITextboxActions lastName () {
-		return onTextbox (By.id ("customer_lastname"));
+		return onTextbox (By.id ("customer_lastname"), "Last Name");
 	}
 
 	/**
@@ -106,7 +106,7 @@ public class RegistrationPage extends BrowserPage {
 	 * @return mobilephone
 	 */
 	public ITextboxActions mobilePhone () {
-		return onTextbox (By.id ("phone_mobile"));
+		return onTextbox (By.id ("phone_mobile"), "Mobile Phone");
 	}
 
 	/**
@@ -114,7 +114,7 @@ public class RegistrationPage extends BrowserPage {
 	 * @return Mr Radio button
 	 */
 	public IMouseActions mrRadioBtn () {
-		return onClickable (By.id ("uniform-id_gender1"));
+		return onClickable (By.id ("uniform-id_gender1"), "Mr Radio Button");
 	}
 
 	/**
@@ -122,7 +122,7 @@ public class RegistrationPage extends BrowserPage {
 	 * @return Mrs Radio button
 	 */
 	public IMouseActions mrsRadioBtn () {
-		return onClickable (By.id ("uniform-id_gender2"));
+		return onClickable (By.id ("uniform-id_gender2"), "Mrs Radio Button");
 	}
 
 	/**
@@ -130,7 +130,7 @@ public class RegistrationPage extends BrowserPage {
 	 * @return password
 	 */
 	public ITextboxActions password () {
-		return onTextbox (By.id ("passwd"));
+		return onTextbox (By.id ("passwd"), "Pasword");
 	}
 
 	/**
@@ -138,7 +138,7 @@ public class RegistrationPage extends BrowserPage {
 	 * @return receive offers
 	 */
 	public IMouseActions receiveOffers () {
-		return onClickable (By.id ("optin"));
+		return onClickable (By.id ("optin"), "Receive Offers checkbox");
 	}
 
 	/**
@@ -146,7 +146,7 @@ public class RegistrationPage extends BrowserPage {
 	 * @return register button
 	 */
 	public IMouseActions registerButton () {
-		return onClickable (By.id ("submitAccount"));
+		return onClickable (By.id ("submitAccount"), "Register Button");
 	}
 
 	/**
@@ -154,7 +154,7 @@ public class RegistrationPage extends BrowserPage {
 	 * @return signup checkbox
 	 */
 	public IMouseActions signUp () {
-		return onClickable (By.id ("newsletter"));
+		return onClickable (By.id ("newsletter"), "Sign Up");
 	}
 
 	/**
@@ -162,7 +162,7 @@ public class RegistrationPage extends BrowserPage {
 	 * @return parent field for state
 	 */
 	public ISelectboxActions parentOfState () {
-		return onDropdown (By.id ("uniform-id_state"));
+		return onDropdown (By.id ("uniform-id_state"), "Parent of State");
 	}
 
 	/**
@@ -170,7 +170,7 @@ public class RegistrationPage extends BrowserPage {
 	 * @return state field
 	 */
 	public ISelectboxActions state () {
-		return parentOfState ().find (By.id ("id_state"));
+		return parentOfState ().find (By.id ("id_state"), "State");
 	}
 
 	/**
@@ -178,7 +178,7 @@ public class RegistrationPage extends BrowserPage {
 	 * @return parent field for years
 	 */
 	public ISelectboxActions parentOfYears () {
-		return onDropdown (By.id ("uniform-years"));
+		return onDropdown (By.id ("uniform-years"), "Parent of Years");
 	}
 
 	/**
@@ -186,7 +186,7 @@ public class RegistrationPage extends BrowserPage {
 	 * @return year
 	 */
 	public ISelectboxActions year () {
-		return parentOfYears ().find (By.id ("years"));
+		return parentOfYears ().find (By.id ("years"), "Year");
 	}
 
 	/**
@@ -194,7 +194,7 @@ public class RegistrationPage extends BrowserPage {
 	 * @return zip code
 	 */
 	public ITextboxActions zipCode () {
-		return onTextbox (By.id ("postcode"));
+		return onTextbox (By.id ("postcode"), "Zip Code");
 	}
 
 }

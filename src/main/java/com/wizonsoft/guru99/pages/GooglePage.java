@@ -17,7 +17,7 @@ public class GooglePage extends BrowserPage {
 	 * @return search textbox
 	 */
 	public ITextboxActions searchBox () {
-		return onTextbox (By.name ("q"));
+		return onTextbox (By.name ("q"), "Search Box");
 	}
 
 	/**
@@ -25,6 +25,6 @@ public class GooglePage extends BrowserPage {
 	 * @return search button
 	 */
 	public IMouseActions searchBtn () {
-		return onClickable (By.name ("btnK"));
+		return onClickable (By.name ("btnK"), "Search Button");
 	}
 }

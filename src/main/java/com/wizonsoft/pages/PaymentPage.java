@@ -9,70 +9,79 @@ import com.github.wasiqb.coteafs.selenium.core.element.IMouseActions;
  * @author Faisal Khatri
  * @since 27-Sep-2019
  */
-public class PaymentPage extends BrowserPage{
-
+public class PaymentPage extends BrowserPage {
 
 	/**
 	 * @return Payment Table
 	 */
 	public IMouseActions paymentTable () {
-		return this.onClickable (By.id ("cart_summary"));
+		return this.onClickable (By.id ("cart_summary"), "Payment Table");
 	}
+
 	/**
 	 * @return Unit Price
 	 */
 	public IMouseActions unitPrice () {
-		return this.paymentTable ().find (By.cssSelector ("tbody > tr > td.cart_unit > span.price"));
+		return paymentTable ().find (By.cssSelector ("tbody > tr > td.cart_unit > span.price"),
+			"Unit Price");
 	}
 
 	/**
 	 * @return Quantity
 	 */
 	public IMouseActions quantity () {
-		return this.paymentTable ().find (By.cssSelector ("tbody > tr> td.cart_quantity.text-center > span"));
+		return paymentTable ()
+			.find (By.cssSelector ("tbody > tr> td.cart_quantity.text-center > span"), "Quantity");
 	}
 
 	/**
 	 * @return Total Price excluding Shipping
 	 */
 	public IMouseActions totalPrice () {
-		return this.paymentTable().find(By.cssSelector ("tfoot > tr.cart_total_price > td#total_product.price"));
+		return paymentTable ().find (
+			By.cssSelector ("tfoot > tr.cart_total_price > td#total_product.price"), "Total Price");
 	}
 
 	/**
 	 * @return Total Shipping
 	 */
 	public IMouseActions totalShipping () {
-		return this.paymentTable().find(By.cssSelector ("tfoot > tr.cart_total_delivery > td#total_shipping.price"));
+		return paymentTable ().find (
+			By.cssSelector ("tfoot > tr.cart_total_delivery > td#total_shipping.price"),
+			"Total Shipping");
 	}
 
 	/**
 	 * @return Grand Total
 	 */
 	public IMouseActions grandTotal () {
-		return this.paymentTable().find (By.cssSelector("tfoot > tr.cart_total_price > td#total_price_container.price > span#total_price"));
+		return paymentTable ().find (
+			By.cssSelector (
+				"tfoot > tr.cart_total_price > td#total_price_container.price > span#total_price"),
+			" Grand Total");
 	}
-
 
 	/**
 	 * @return Pay by Check
 	 */
 	public IMouseActions payBycheck () {
-		return this.onClickable (By.cssSelector ("#HOOK_PAYMENT > div > div >p > a.cheque"));
+		return this.onClickable (By.cssSelector ("#HOOK_PAYMENT > div > div >p > a.cheque"),
+			"Pay By Check");
 	}
 
 	/**
 	 * @return Confirm Payment
 	 */
-	public IMouseActions confirmPayment() {
-		return this.onClickable (By.cssSelector ("#cart_navigation > button"));
+	public IMouseActions confirmPayment () {
+		return this.onClickable (By.cssSelector ("#cart_navigation > button"), "Confirm Payment");
 	}
 
 	/**
 	 * @return Success Message
 	 */
 	public IMouseActions successMessage () {
-		return this.onClickable (By.cssSelector ("#center_column > p.alert.alert-success"));
+		return this.onClickable (By.cssSelector ("#center_column > p.alert.alert-success"),
+			"Success Message");
 	}
 
 }

@@ -1,0 +1,67 @@
+---- AspectJ Properties ---
+AspectJ Compiler 1.9.4 built on Friday May 10, 2019 at 08:43:10 PDT
+---- Dump Properties ---
+Dump file: ajcore.20200717.180725.828.txt
+Dump reason: org.aspectj.weaver.BCException
+Dump on exception: true
+Dump at exit condition: abort
+---- Exception Information ---
+---- System Properties ---
+java.specification.version=14
+webdriver.chrome.driver=C:\Users\ADMIN\.m2\repository\webdriver\chromedriver\win32\83.0.4103.39\chromedriver.exe
+sun.cpu.isalist=amd64
+sun.jnu.encoding=Cp1252
+java.class.path=D:\Eclipse\jee-2020-03\eclipse\configuration\org.eclipse.osgi\978\0\.cp\lib\testng-remote.jar;D:\Eclipse_Oxygen\WorkSpace\coteafs-selenium-tests\target\test-classes;D:\Eclipse_Oxygen\WorkSpace\coteafs-selenium-tests\target\classes;C:\Users\ADMIN\.m2\repository\com\github\javafaker\javafaker\0.18\javafaker-0.18.jar;C:\Users\ADMIN\.m2\repository\org\apache\commons\commons-lang3\3.5\commons-lang3-3.5.jar;C:\Users\ADMIN\.m2\repository\org\yaml\snakeyaml\1.23\snakeyaml-1.23-android.jar;C:\Users\ADMIN\.m2\repository\com\github\mifmif\generex\1.0.2\generex-1.0.2.jar;C:\Users\ADMIN\.m2\repository\dk\brics\automaton\automaton\1.11-8\automaton-1.11-8.jar;C:\Users\ADMIN\.m2\repository\com\github\wasiqb\coteafs\selenium\3.3.0\selenium-3.3.0.jar;C:\Users\ADMIN\.m2\repository\com\github\wasiqb\coteafs\configs\2.3.0\configs-2.3.0.jar;C:\Users\ADMIN\.m2\repository\org\yaml\snakeyaml\1.26\snakeyaml-1.26.jar;C:\Users\ADMIN\.m2\repository\org\apache\commons\commons-text\1.8\commons-text-1.8.jar;C:\Users\ADMIN\.m2\repository\com\fasterxml\jackson\dataformat\jackson-dataformat-properties\2.11.1\jackson-dataformat-properties-2.11.1.jar;C:\Users\ADMIN\.m2\repository\com\fasterxml\jackson\dataformat\jackson-dataformat-xml\2.11.1\jackson-dataformat-xml-2.11.1.jar;C:\Users\ADMIN\.m2\repository\com\fasterxml\jackson\module\jackson-module-jaxb-annotations\2.11.1\jackson-module-jaxb-annotations-2.11.1.jar;C:\Users\ADMIN\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\2.3.2\jakarta.xml.bind-api-2.3.2.jar;C:\Users\ADMIN\.m2\repository\jakarta\activation\jakarta.activation-api\1.2.1\jakarta.activation-api-1.2.1.jar;C:\Users\ADMIN\.m2\repository\org\codehaus\woodstox\stax2-api\4.2.1\stax2-api-4.2.1.jar;C:\Users\ADMIN\.m2\repository\com\fasterxml\woodstox\woodstox-core\6.2.1\woodstox-core-6.2.1.jar;C:\Users\ADMIN\.m2\repository\com\github\wasiqb\coteafs\listeners\2.4.0\listeners-2.4.0.jar;C:\Users\ADMIN\.m2\repository\com\github\wasiqb\coteafs\error\1.13.0\error-1.13.0.jar;C:\Users\ADMIN\.m2\repository\com\github\wasiqb\coteafs\logger\2.4.0\logger-2.4.0.jar;C:\Users\ADMIN\.m2\repository\org\apache\logging\log4j\log4j-core\2.13.3\log4j-core-2.13.3.jar;C:\Users\ADMIN\.m2\repository\org\apache\logging\log4j\log4j-api\2.13.3\log4j-api-2.13.3.jar;C:\Users\ADMIN\.m2\repository\com\google\truth\truth\1.0.1\truth-1.0.1.jar;C:\Users\ADMIN\.m2\repository\org\checkerframework\checker-compat-qual\2.5.5\checker-compat-qual-2.5.5.jar;C:\Users\ADMIN\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\ADMIN\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\ADMIN\.m2\repository\com\googlecode\java-diff-utils\diffutils\1.3.0\diffutils-1.3.0.jar;C:\Users\ADMIN\.m2\repository\com\google\auto\value\auto-value-annotations\1.6.3\auto-value-annotations-1.6.3.jar;C:\Users\ADMIN\.m2\repository\com\google\errorprone\error_prone_annotations\2.3.3\error_prone_annotations-2.3.3.jar;C:\Users\ADMIN\.m2\repository\org\seleniumhq\selenium\selenium-java\3.141.59\selenium-java-3.141.59.jar;C:\Users\ADMIN\.m2\repository\org\seleniumhq\selenium\selenium-api\3.141.59\selenium-api-3.141.59.jar;C:\Users\ADMIN\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\3.141.59\selenium-chrome-driver-3.141.59.jar;C:\Users\ADMIN\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\3.141.59\selenium-edge-driver-3.141.59.jar;C:\Users\ADMIN\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\3.141.59\selenium-firefox-driver-3.141.59.jar;C:\Users\ADMIN\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\3.141.59\selenium-ie-driver-3.141.59.jar;C:\Users\ADMIN\.m2\repository\org\seleniumhq\selenium\selenium-opera-driver\3.141.59\selenium-opera-driver-3.141.59.jar;C:\Users\ADMIN\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\3.141.59\selenium-remote-driver-3.141.59.jar;C:\Users\ADMIN\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\3.141.59\selenium-safari-driver-3.141.59.jar;C:\Users\ADMIN\.m2\repository\org\seleniumhq\selenium\selenium-support\3.141.59\selenium-support-3.141.59.jar;C:\Users\ADMIN\.m2\repository\net\bytebuddy\byte-buddy\1.8.15\byte-buddy-1.8.15.jar;C:\Users\ADMIN\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Users\ADMIN\.m2\repository\com\squareup\okhttp3\okhttp\3.11.0\okhttp-3.11.0.jar;C:\Users\ADMIN\.m2\repository\com\squareup\okio\okio\1.14.0\okio-1.14.0.jar;C:\Users\ADMIN\.m2\repository\io\github\bonigarcia\webdrivermanager\4.1.0\webdrivermanager-4.1.0.jar;C:\Users\ADMIN\.m2\repository\org\slf4j\slf4j-api\1.7.30\slf4j-api-1.7.30.jar;C:\Users\ADMIN\.m2\repository\commons-io\commons-io\2.7\commons-io-2.7.jar;C:\Users\ADMIN\.m2\repository\com\google\code\gson\gson\2.8.6\gson-2.8.6.jar;C:\Users\ADMIN\.m2\repository\org\apache\httpcomponents\client5\httpclient5\5.0.1\httpclient5-5.0.1.jar;C:\Users\ADMIN\.m2\repository\org\apache\httpcomponents\core5\httpcore5\5.0.1\httpcore5-5.0.1.jar;C:\Users\ADMIN\.m2\repository\org\apache\httpcomponents\core5\httpcore5-h2\5.0.1\httpcore5-h2-5.0.1.jar;C:\Users\ADMIN\.m2\repository\commons-codec\commons-codec\1.13\commons-codec-1.13.jar;C:\Users\ADMIN\.m2\repository\org\rauschig\jarchivelib\1.0.0\jarchivelib-1.0.0.jar;C:\Users\ADMIN\.m2\repository\org\apache\commons\commons-compress\1.18\commons-compress-1.18.jar;C:\Users\ADMIN\.m2\repository\org\jsoup\jsoup\1.13.1\jsoup-1.13.1.jar;C:\Users\ADMIN\.m2\repository\com\google\guava\guava\29.0-jre\guava-29.0-jre.jar;C:\Users\ADMIN\.m2\repository\com\google\guava\failureaccess\1.0.1\failureaccess-1.0.1.jar;C:\Users\ADMIN\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\ADMIN\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\ADMIN\.m2\repository\org\checkerframework\checker-qual\2.11.1\checker-qual-2.11.1.jar;C:\Users\ADMIN\.m2\repository\com\google\j2objc\j2objc-annotations\1.3\j2objc-annotations-1.3.jar;C:\Users\ADMIN\.m2\repository\com\github\stephenc\monte\monte-screen-recorder\0.7.7.0\monte-screen-recorder-0.7.7.0.jar;C:\Users\ADMIN\.m2\repository\io\qameta\allure\allure-testng\2.13.0\allure-testng-2.13.0.jar;C:\Users\ADMIN\.m2\repository\io\qameta\allure\allure-java-commons\2.13.0\allure-java-commons-2.13.0.jar;C:\Users\ADMIN\.m2\repository\io\qameta\allure\allure-model\2.13.0\allure-model-2.13.0.jar;C:\Users\ADMIN\.m2\repository\org\apache\tika\tika-core\1.20\tika-core-1.20.jar;C:\Users\ADMIN\.m2\repository\org\jooq\joor-java-8\0.9.10\joor-java-8-0.9.10.jar;C:\Users\ADMIN\.m2\repository\org\testng\testng\6.14.3\testng-6.14.3.jar;C:\Users\ADMIN\.m2\repository\com\beust\jcommander\1.72\jcommander-1.72.jar;C:\Users\ADMIN\.m2\repository\org\apache-extras\beanshell\bsh\2.0b6\bsh-2.0b6.jar;C:\Users\ADMIN\.m2\repository\org\aspectj\aspectjweaver\1.9.4\aspectjweaver-1.9.4.jar;C:\Users\ADMIN\.m2\repository\com\epam\reportportal\agent-java-testng\4.2.1\agent-java-testng-4.2.1.jar;C:\Users\ADMIN\.m2\repository\com\epam\reportportal\client-java\4.0.10\client-java-4.0.10.jar;C:\Users\ADMIN\.m2\repository\io\reactivex\rxjava2\rxjava\2.1.16\rxjava-2.1.16.jar;C:\Users\ADMIN\.m2\repository\org\reactivestreams\reactive-streams\1.0.2\reactive-streams-1.0.2.jar;C:\Users\ADMIN\.m2\repository\com\epam\reportportal\commons-model\4.2.0\commons-model-4.2.0.jar;C:\Users\ADMIN\.m2\repository\io\swagger\swagger-annotations\1.5.13\swagger-annotations-1.5.13.jar;C:\Users\ADMIN\.m2\repository\javax\validation\validation-api\1.1.0.Final\validation-api-1.1.0.Final.jar;C:\Users\ADMIN\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.10.3\jackson-databind-2.10.3.jar;C:\Users\ADMIN\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.10.3\jackson-annotations-2.10.3.jar;C:\Users\ADMIN\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.10.3\jackson-core-2.10.3.jar
+java.vm.vendor=Oracle Corporation
+sun.arch.data.model=64
+user.variant=
+java.vendor.url=https://java.oracle.com/
+user.timezone=Asia/Calcutta
+java.vm.specification.version=14
+os.name=Windows 10
+webdriver.chrome.silentOutput=true
+sun.java.launcher=SUN_STANDARD
+user.country=US
+sun.boot.library.path=D:\Tools\Java\jdk-14.0.1\bin
+sun.java.command=org.testng.remote.RemoteTestNG -serport 56927 -protocol json -d D:\Eclipse_Oxygen\WorkSpace\coteafs-selenium-tests\test-output D:\Eclipse_Oxygen\WorkSpace\coteafs-selenium-tests\testng.xml
+jdk.debug=release
+sun.cpu.endian=little
+user.home=C:\Users\ADMIN
+user.language=en
+java.specification.vendor=Oracle Corporation
+java.version.date=2020-04-14
+java.home=D:\Tools\Java\jdk-14.0.1
+file.separator=\
+java.vm.compressedOopsMode=32-bit
+line.separator=
+
+java.vm.specification.vendor=Oracle Corporation
+java.specification.name=Java Platform API Specification
+user.script=
+sun.management.compiler=HotSpot 64-Bit Tiered Compilers
+java.runtime.version=14.0.1+7
+user.name=ADMIN
+path.separator=;
+os.version=10.0
+java.runtime.name=Java(TM) SE Runtime Environment
+file.encoding=Cp1252
+java.vm.name=Java HotSpot(TM) 64-Bit Server VM
+java.vendor.url.bug=https://bugreport.java.com/bugreport/
+java.io.tmpdir=C:\Users\ADMIN\AppData\Local\Temp\
+java.version=14.0.1
+user.dir=D:\Eclipse_Oxygen\WorkSpace\coteafs-selenium-tests
+os.arch=amd64
+java.vm.specification.name=Java Virtual Machine Specification
+sun.os.patch.level=
+java.library.path=D:\Tools\Java\jdk-14.0.1\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;D:/Tools/Java/jdk1.8.0_221/bin/../jre/bin/server;D:/Tools/Java/jdk1.8.0_221/bin/../jre/bin;D:/Tools/Java/jdk1.8.0_221/bin/../jre/lib/amd64;C:\Program Files\Python38\Scripts\;C:\Program Files\Python38\;C:\Program Files (x86)\Python38-32\Scripts\;C:\Program Files (x86)\Python38-32\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\System32;C:\Windows;C:\Windows\System32\wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;D:\Tools\Java\jdk-14.0.1\bin;C:\Program Files\Git\cmd;C:\Program Files (x86)\GnuPG\bin;C:\Users\ADMIN\AppData\Local\Android\Sdk\tools\bin;C:\Users\ADMIN\AppData\Local\Android\Sdk\tools;C:\Users\ADMIN\AppData\Local\Android\Sdk\platform-tools;D:\Tools\apache-maven\bin;D:\Tools\gradle-5.6\bin;C:\Program Files\Gauge\bin;C:\Program Files\nodejs\;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Users\ADMIN\AppData\Local\salabs_\WebDriverManager\bin;C:\Ruby26-x64\bin;C:\Users\ADMIN\.windows-build-tools\python27\;C:\Program Files\nodejs\node_modules\npm\node_modules\npm-lifecycle\node-gyp-bin;C:\Users\ADMIN\AppData\Roaming\npm\node_modules\windows-build-tools\node_modules\.bin;C:\Users\ADMIN\AppData\Roaming\npm\node_modules\.bin;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\Docker\Docker\Resources\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Program Files (x86)\Gpg4win\..\GnuPG\bin;C:\Users\ADMIN\AppData\Local\Android\Sdk\tools\bin;C:\Users\ADMIN\AppData\Local\Android\Sdk\tools;C:\Users\ADMIN\AppData\Local\Android\Sdk\platform-tools;C:\Users\ADMIN\AppData\Local\Microsoft\WindowsApps;C:\Users\ADMIN\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2019.3.2\bin;C:\Users\ADMI;C:\Users\ADMIN\AppData\Local\Microsoft\WindowsApps;C:\Users\ADMIN\AppData\Roaming\npm;;C:\WINDOWS\system32;;.
+java.vm.info=mixed mode, sharing
+java.vendor=Oracle Corporation
+java.vm.version=14.0.1+7
+sun.io.unicode.encoding=UnicodeLittle
+java.class.version=58.0
+---- Command Line ---
+Empty
+---- Full Classpath ---
+Empty
+---- Compiler Messages ---
+Empty

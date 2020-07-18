@@ -1,0 +1,7 @@
+!!com.github.wasiqb.coteafs.logger.config.LoggerSetting
+logDir: /logs
+loggers:
+- {archive: null, fileName: null, level: DEBUG, messagePattern: '[%d{HH:mm:ss.SSS}]
+    [%-5level] - %msg (%logger{1}:%L) %throwable{short.message}%n', name: console-log,
+  pathPattern: null, type: CONSOLE}
+status: WARN

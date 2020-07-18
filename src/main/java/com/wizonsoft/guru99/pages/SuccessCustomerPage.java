@@ -31,7 +31,8 @@ public class SuccessCustomerPage extends SuccessPage {
 	 * @return customer id
 	 */
 	public ITextboxActions customerId () {
-		return successTable ().find (By.cssSelector ("tbody > tr:nth-child(4) > td:last-child"));
+		return successTable ().find (By.cssSelector ("tbody > tr:nth-child(4) > td:last-child"),
+			"Customer Id");
 	}
 
 	/**
@@ -40,7 +41,8 @@ public class SuccessCustomerPage extends SuccessPage {
 	 * @return customer name
 	 */
 	public ITextboxActions customerName () {
-		return successTable ().find (By.cssSelector ("tbody > tr:nth-child(5) > td:last-child"));
+		return successTable ().find (By.cssSelector ("tbody > tr:nth-child(5) > td:last-child"),
+			"Customer Name");
 	}
 
 	/*
@@ -49,6 +51,6 @@ public class SuccessCustomerPage extends SuccessPage {
 	 */
 	@Override
 	protected IMouseActions successTable () {
-		return onClickable (By.id ("customer"));
+		return onClickable (By.id ("customer"), "Success Table");
 	}
 }

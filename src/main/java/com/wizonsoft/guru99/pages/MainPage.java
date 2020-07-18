@@ -31,7 +31,7 @@ public class MainPage extends BrowserPage {
 	 * @return manager welcome banner
 	 */
 	public IMouseActions managerIdBanner () {
-		return onClickable (By.cssSelector ("tr.heading3 > td"));
+		return onClickable (By.cssSelector ("tr.heading3 > td"), "Manager Id Banner");
 	}
 
 	/**
@@ -41,7 +41,7 @@ public class MainPage extends BrowserPage {
 	 * @return menu name
 	 */
 	public IMouseActions navbar (final String name) {
-		return navbar ().finds (By.cssSelector ("li > a"))
+		return navbar ().finds (By.cssSelector ("li > a"), "Menu Names")
 			.stream ()
 			.filter (m -> m.text ()
 				.trim ()
@@ -51,6 +51,6 @@ public class MainPage extends BrowserPage {
 	}
 
 	private IMouseActions navbar () {
-		return onClickable (By.className ("menusubnav"));
+		return onClickable (By.className ("menusubnav"), "Menu name Navbar");
 	}
 }

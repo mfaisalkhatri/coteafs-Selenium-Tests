@@ -38,9 +38,9 @@ public abstract class SuccessPage extends MainPage {
 	}
 
 	protected IMouseActions cell (final int row, final int col) {
-		return successTable ().finds (By.tagName ("tr"))
+		return successTable ().finds (By.tagName ("tr"), "Table Rows")
 			.get (row)
-			.finds (By.tagName ("td"))
+			.finds (By.tagName ("td"), "Table Data")
 			.get (col);
 	}
 

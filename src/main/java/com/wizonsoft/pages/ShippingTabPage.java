@@ -9,20 +9,20 @@ import com.github.wasiqb.coteafs.selenium.core.element.IMouseActions;
  * @author Faisal Khatri
  * @since 27-Sep-2019
  */
-public class ShippingTabPage extends BrowserPage{
+public class ShippingTabPage extends BrowserPage {
 
 	/**
 	 * @return agreeTerms checkbox
 	 */
 	public IMouseActions agreeTerms () {
-		return this.onClickable (By.id ("uniform-cgv"));
+		return this.onClickable (By.id ("uniform-cgv"), "Agree Terms");
 	}
 
 	/**
 	 * @return Proceed To Checkout button
 	 */
 	public IMouseActions proceedToCheckout () {
-		return this.onClickable (By.cssSelector ("#form > p > button"));
+		return this.onClickable (By.cssSelector ("#form > p > button"), "Proceed to Checkout");
 	}
 
 }

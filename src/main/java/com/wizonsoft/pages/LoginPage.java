@@ -17,7 +17,7 @@ public class LoginPage extends BrowserPage {
 	 * @return submit button
 	 */
 	public IMouseActions createAccountButton () {
-		return onClickable (By.id ("SubmitCreate"));
+		return onClickable (By.id ("SubmitCreate"), "Create Account Button");
 	}
 
 	/**
@@ -25,7 +25,7 @@ public class LoginPage extends BrowserPage {
 	 * @return email Id
 	 */
 	public ITextboxActions emailId () {
-		return onTextbox (By.id ("email_create"));
+		return onTextbox (By.id ("email_create"), "Email Id");
 	}
 
 	/**
@@ -33,7 +33,7 @@ public class LoginPage extends BrowserPage {
 	 * @return password
 	 */
 	public ITextboxActions password () {
-		return onTextbox (By.id ("passwd"));
+		return onTextbox (By.id ("passwd"), "Password");
 	}
 
 	/**
@@ -41,7 +41,7 @@ public class LoginPage extends BrowserPage {
 	 * @return signIn Button
 	 */
 	public IMouseActions signInButton () {
-		return onClickable (By.id ("SubmitLogin"));
+		return onClickable (By.id ("SubmitLogin"), "Sign In Button");
 	}
 
 	/**
@@ -49,6 +49,6 @@ public class LoginPage extends BrowserPage {
 	 * @return signin Email
 	 */
 	public ITextboxActions signInEmail () {
-		return onTextbox (By.id ("email"));
+		return onTextbox (By.id ("email"), "Sign In Email");
 	}
 }

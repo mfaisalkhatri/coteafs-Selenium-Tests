@@ -32,7 +32,7 @@ public class NewAccountPage extends EditCustomerPage {
 	 * @return account type
 	 */
 	public ISelectboxActions accountType () {
-		return onDropdown (By.name ("selaccount"));
+		return onDropdown (By.name ("selaccount"), "Account Type");
 	}
 
 	/**
@@ -41,7 +41,7 @@ public class NewAccountPage extends EditCustomerPage {
 	 * @return initial amount
 	 */
 	public ITextboxActions initialDeposit () {
-		return onTextbox (By.name ("inideposit"));
+		return onTextbox (By.name ("inideposit"), "Initial Deposit");
 	}
 
 	/*
@@ -50,6 +50,6 @@ public class NewAccountPage extends EditCustomerPage {
 	 */
 	@Override
 	public IMouseActions submit () {
-		return onClickable (By.name ("button2"));
+		return onClickable (By.name ("button2"), "Submit");
 	}
 }
